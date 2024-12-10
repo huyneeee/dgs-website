@@ -9,6 +9,9 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+const urlImages =
+  process.env.NEXT_PUBLIC_LANDING_URL + '/images/opengraph-image.png';
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -19,6 +22,24 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>) {
 
   return {
     title: t('title'),
+    description: t('description'),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_LANDING_URL || ''),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      images: urlImages,
+      type: 'website',
+    },
+    twitter: {
+      title: t('title'),
+      description: t('description'),
+      images: urlImages,
+    },
+    icons: {
+      icon: '/images/meta/favicon.png',
+      apple: '/images/meta/apple-touch-icon.png',
+      shortcut: '/images/meta/favicon.png',
+    },
   };
 }
 

@@ -27,7 +27,7 @@ export default async function BaseLayout({ children, locale }: Props) {
     <html className='h-full' lang={locale}>
       <body className={cn(franklin.className, 'flex h-full flex-col')}>
         <NextIntlClientProvider messages={messages}>
-          <Navigation />
+          <Navigation type='normal' />
           {children}
           <Searching />
           <Footer />

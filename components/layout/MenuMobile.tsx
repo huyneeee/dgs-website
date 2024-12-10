@@ -91,32 +91,45 @@ const MenuMobile = () => {
           </Button>
         </div>
         <div className='flex-auto overflow-y-auto'>
-          {DATA.map((nav, key) => (
-            <Collapsible key={key} className='group/collapsible'>
-              <CollapsibleTrigger className='flex items-center py-3 group-data-[state=open]/collapsible:font-semibold group-data-[state=open]/collapsible:text-jungle'>
-                {t(`${nav[0]}.root` as any)}
-                <ChevronRight
-                  size={16}
-                  className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90'
-                />
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <div className='flex flex-col gap-2 pl-5'>
-                  {Object.entries(nav[1])
-                    .slice(1)
-                    .map((navChild, keyChild) => (
-                      <Link
-                        className='hover:text-jungle hover:font-semibold hover:underline pb-1'
-                        key={`${key}-${keyChild}`}
-                        href={navChild[1]}
-                      >
-                        {t(`${nav[0]}.${navChild[0]}` as any)}
-                      </Link>
-                    ))}
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
-          ))}
+          {DATA.map((nav, key) => {
+            if (Object.keys(nav[1]).length === 1) {
+              return (
+                <Link
+                  key={key}
+                  href={(nav[1] as any).root}
+                  className='hover:text-jungle hover:font-semibold hover:underline pb-1'
+                >
+                  {t(`${nav[0]}.root` as any)}
+                </Link>
+              );
+            }
+            return (
+              <Collapsible key={key} className='group/collapsible'>
+                <CollapsibleTrigger className='flex items-center py-3 group-data-[state=open]/collapsible:font-semibold group-data-[state=open]/collapsible:text-jungle'>
+                  {t(`${nav[0]}.root` as any)}
+                  <ChevronRight
+                    size={16}
+                    className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90'
+                  />
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <div className='flex flex-col gap-2 pl-5'>
+                    {Object.entries(nav[1])
+                      .slice(1)
+                      .map((navChild, keyChild) => (
+                        <Link
+                          className='hover:text-jungle hover:font-semibold hover:underline pb-1'
+                          key={`${key}-${keyChild}`}
+                          href={navChild[1]}
+                        >
+                          {t(`${nav[0]}.${navChild[0]}` as any)}
+                        </Link>
+                      ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            );
+          })}
         </div>
         <SwitchLanguage />
       </SheetContent>

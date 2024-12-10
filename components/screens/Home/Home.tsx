@@ -1,6 +1,7 @@
 import { Analysis } from './Analysis';
 import { MainHero } from './MainHero';
 import { News } from './News';
+import { StudentWellBeing } from './StudentWellBeing';
 import { Testimonials } from './Testimonials';
 
 const HomePage = () => {
@@ -10,9 +11,7 @@ const HomePage = () => {
       <News />
       <Testimonials />
       <Analysis />
-      {/* <div className='container flex items-center justify-center sm:py-10 py-5'>
-        <h2 className='text-6xl text-jungle'>Be Kind, Be Curious, Be Courageous</h2>
-      </div> */}
+      <StudentWellBeing />
     </main>
   );
 };
