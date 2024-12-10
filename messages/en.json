@@ -1,0 +1,68 @@
+{
+  "language": "Language",
+  "slogan": "Fostering Kindness, Curiosity and Courage",
+  "Navigation": {
+    "about": {
+      "root": "About Us",
+      "deltas": "The Deltas",
+      "mission-and-vision": "Mission and Vision",
+      "history": "DGS History",
+      "our-team": "Our Team"
+    },
+    "academics": {
+      "root": "Academics",
+      "kindergarten": "Kindergarten",
+      "primary-school": "Primary School",
+      "middle-school": "Middle School",
+      "hight-school": "High School",
+      "college-counselling": "College Counseling"
+    },
+    "co-curriculars": {
+      "root": "Co Curriculars",
+      "advisory": "Advisory",
+      "club-and-activities": "Club and Activities",
+      "experiential-education": "Experiential Education"
+    },
+    "admissions": {
+      "root": "Admissions",
+      "admissions-regulations": "Admission Regulations",
+      "admission-process": "Admission Process",
+      "contact-admission": "Contact Admission"
+    },
+    "student-well-being": {
+      "root": "Student Well-being",
+      "cpoms": "CPOMS",
+      "leadership-opportunities": "Leadership Opportunities"
+    },
+    "careers": {
+      "root": "Careers"
+    },
+    "resources": {
+      "root": "Resources",
+      "news-and-events": "News and Events",
+      "dgs-library": "DGS Library",
+      "policies": "Policies",
+      "school-calendar": "School Calendar",
+      "handbook": "Handbook",
+      "education-review": "Education Review"
+    }
+  },
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "MetaData": {
+    "title": "DGS Website"
+  },
+  "NotFoundPage": {
+    "title": "Page not found",
+    "description": "Desc page not found"
+  },
+  "Manifest": {
+    "name": "Manifest"
+  },
+  "Error": {
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "title": "Something went wrong!"
+  }
+}

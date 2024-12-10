@@ -1,0 +1,68 @@
+{
+  "language": "Ngôn ngữ",
+  "slogan": "Nuôi dưỡng sự nhân hậu, sự tò mò và sự dũng cảm",
+  "Navigation": {
+    "about": {
+      "root": "Giới thiệu",
+      "deltas": "Giá trị cốt lõi",
+      "mission-and-vision": "Nhiệm vụ và tầm nhìn",
+      "history": "Lịch sử DGS",
+      "our-team": "Đội ngủ DGS"
+    },
+    "academics": {
+      "root": "Chương trình học",
+      "kindergarten": "Chương trình mẫu giáo",
+      "primary-school": "Chương trình tiểu học",
+      "middle-school": "Trung học cơ sở",
+      "hight-school": "Trung học phổ thông",
+      "college-counselling": "Tư vấn đại học"
+    },
+    "co-curriculars": {
+      "root": "Hoạt động hỗ trợ học tâp",
+      "advisory": "Chương trình",
+      "club-and-activities": "Câu lạc bộ và hoạt động ngoại khoá",
+      "experiential-education": "Giáo dục trải nghiệm"
+    },
+    "admissions": {
+      "root": "Tuyển sinh",
+      "admissions-regulations": "Quy định tuyển sinh",
+      "admission-process": "Quá trình tuyển sinh",
+      "contact-admission": "Liên hệ tư vấn tuyển sinh"
+    },
+    "student-well-being": {
+      "root": "Đời sống học đường",
+      "cpoms": "CPOMS",
+      "leadership-opportunities": "Cơ hộ phát triển kỹ đạo lãnh đạo"
+    },
+    "careers": {
+      "root": "Cơ hội việc làm"
+    },
+    "resources": {
+      "root": "Tài nguyên",
+      "news-and-events": "Tin tức và sự kiện",
+      "dgs-library": "Thư viện DGS",
+      "policies": "Chính sách",
+      "school-calendar": "Lịch năm học",
+      "handbook": "Sổ tay",
+      "education-review": "Tổng quan giáo dục"
+    }
+  },
+  "HomePage": {
+    "title": "Xin chào thế giới",
+    "about": "Chuyể đến trang thông tin"
+  },
+  "MetaData": {
+    "title": "DGS School"
+  },
+  "NotFoundPage": {
+    "title": "Page not found vi",
+    "description": "Desc page not found vi"
+  },
+  "Manifest": {
+    "name": "Manifest vi"
+  },
+  "Error": {
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "title": "Something went wrong!"
+  }
+}
