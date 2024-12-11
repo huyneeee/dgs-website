@@ -1,6 +1,8 @@
 import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 export const MainHero = () => {
+  const t = useTranslations();
   return (
     <div className='w-screen h-screen relative'>
       <video
@@ -19,13 +21,13 @@ export const MainHero = () => {
       <div className='container mx-auto'>
         <div className='flex flex-col absolute top-1/2 -translate-y-1/2 z-[2] xl:gap-16 gap-10'>
           <h3 className='lg:text-7xl sm:text-5xl text-4xl text-white sm:max-w-[60%] font-extrabold'>
-            Mind, Character, Community: Themes of a DGS Education
+            {t('mainHeroDesc')}
           </h3>
           <Link
             href='/'
             className='text-white text-lg sm:text-xl uppercase pb-2 border-b-4 border-white w-fit font-bold font-sans hover:text-bamboo hover:border-bamboo'
           >
-            Read more
+            {t('readMore')}
           </Link>
         </div>
       </div>

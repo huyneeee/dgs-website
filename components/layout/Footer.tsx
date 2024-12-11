@@ -67,7 +67,7 @@ export const Footer = () => {
                   alt='link'
                   width={32}
                   height={32}
-                  className='grayscale brightness-75 hover:brightness-100 hover:grayscale-0'
+                  className='brightness-75 hover:brightness-100 hover:grayscale-0'
                 />
               </Link>
             ))}
@@ -94,7 +94,7 @@ export const Footer = () => {
               <Link
                 href={item.link}
                 key={key}
-                className='text-base text-white/70 font-light hover:text-white hover:underline underline-offset-2'
+                className='text-sm text-white/70 font-light hover:text-white hover:underline underline-offset-2'
               >
                 {item.text}
               </Link>
@@ -127,7 +127,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className='container flex items-center justify-center border-t border-white/40 sm:py-10 py-5'>
-        <p className='text-white/50'>
+        <p className='text-white/50 text-sm'>
           © 2024 DGS Country School | Privacy Policy
         </p>
       </div>

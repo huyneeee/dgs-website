@@ -1,5 +1,6 @@
 import { paths } from '@/app/router';
 import { Button } from '@/components/ui/button';
+import FadeInBox from '@/components/ui/fadein-box';
 import { Link } from '@/i18n/routing';
 import { useFormatter } from 'next-intl';
 import Image from 'next/image';
@@ -22,7 +23,8 @@ const Data = [
   {
     image:
       'https://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/s3/field/field_image_main/GettyImages-2160701519_resize.jpg?itok=NqG3Xa6U',
-    title: 'Novo Nordisk announces £18.5 million of funding for a further 20 Postdoctoral Fellows',
+    title:
+      'Novo Nordisk announces £18.5 million of funding for a further 20 Postdoctoral Fellows',
     date: '2024-12-09T00:00:00Z',
   },
 ];
@@ -32,7 +34,7 @@ const Item = ({ title, image, date }: (typeof Data)[0]) => {
   const dateTime = new Date(date);
 
   return (
-    <div className='flex flex-col flex-1 xl:gap-3 gap-2 group cursor-pointer'>
+    <FadeInBox className='flex flex-col flex-1 xl:gap-3 gap-2 group cursor-pointer'>
       <div className='relative w-full aspect-[3/2] rounded-lg overflow-hidden'>
         <Image
           src={image}
@@ -55,7 +57,7 @@ const Item = ({ title, image, date }: (typeof Data)[0]) => {
           day: 'numeric',
         })}
       </p>
-    </div>
+    </FadeInBox>
   );
 };
 

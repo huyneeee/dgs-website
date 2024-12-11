@@ -1,6 +1,8 @@
 {
   "language": "Language",
   "slogan": "Fostering Kindness, Curiosity and Courage",
+  "readMore": "Read more",
+  "mainHeroDesc": "Mind, Character, Community: Themes of a DGS Education",
   "Navigation": {
     "about": {
       "root": "About Us",
@@ -49,7 +51,9 @@
   },
   "HomePage": {
     "title": "Hello world!",
-    "about": "Go to the about page"
+    "about": "Go to the about page",
+    "studentWellBeing-1": "DGS maintains strong safeguarding and child protection policies & procedures, this ensures that our students can pursue their education in a safe, secure, and caring environment.",
+    "studentWellBeing-2": "Our safeguarding policy"
   },
   "MetaData": {
     "title": "DGS School",

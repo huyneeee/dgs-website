@@ -1,6 +1,8 @@
 {
   "language": "Ngôn ngữ",
   "slogan": "Nuôi dưỡng sự nhân hậu, sự tò mò và sự dũng cảm",
+  "mainHeroDesc": "Tâm trí, Tính cách, Cộng đồng: Chủ đề của Giáo dục DGS",
+  "readMore": "Đọc thêm",
   "Navigation": {
     "about": {
       "root": "Giới thiệu",
@@ -49,7 +51,9 @@
   },
   "HomePage": {
     "title": "Xin chào thế giới",
-    "about": "Chuyể đến trang thông tin"
+    "about": "Chuyể đến trang thông tin",
+    "studentWellBeing-1": "DGS nhấn mạnh vào các chính sách và quy trình bảo vệ trẻ em, điều này đảm bảo rằng học sinh DGS có môi trường học an toàn và nhận được sự quan tâm chu đáo.",
+    "studentWellBeing-2": "Chính sách bảo vệ trẻ em"
   },
   "MetaData": {
     "title": "DGS School",
