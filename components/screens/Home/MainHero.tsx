@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 export const MainHero = () => {
   const t = useTranslations();
   return (
-    <div className='w-screen h-screen relative'>
+    <div className='w-screen h-svh relative'>
       <video
         width='100%'
         height='100%'
