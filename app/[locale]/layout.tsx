@@ -10,7 +10,7 @@ type Props = {
 };
 
 const urlImages =
-  process.env.NEXT_PUBLIC_LANDING_URL + '/images/opengraph-image.png';
+  process.env.NEXT_PUBLIC_LANDING_URL + '/images/meta/opengraph-image.png';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
