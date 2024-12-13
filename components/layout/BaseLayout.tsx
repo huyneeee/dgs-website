@@ -1,5 +1,5 @@
 import Navigation from '@/components/layout/Navigation';
-import Searching from '@/components/screens/Searching';
+import Searching from '@/screens/Searching';
 import { cn } from '@/lib/utils';
 import { LazyMotion, domAnimation } from 'motion/react';
 import { NextIntlClientProvider } from 'next-intl';

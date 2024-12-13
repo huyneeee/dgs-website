@@ -1,1 +1,1 @@
-export {default} from '@/components/screens/NotFoundPage';
+export {default} from '@/screens/NotFoundPage';
