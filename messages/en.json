@@ -56,7 +56,11 @@
     "studentWellBeing-2": "Our safeguarding policy"
   },
   "AboutPage": {
-    "title": "About"
+    "title": "About",
+    "advisoryBoard": "Advisory Board",
+    "seniorLeadershipTeam": "Senior Leadership Team",
+    "middleSchool": "Middle School",
+    "highSchool": "High School"
   },
   "MetaData": {
     "title": "DGS School",

@@ -9,7 +9,7 @@
       "deltas": "Giá trị cốt lõi",
       "mission-and-vision": "Nhiệm vụ và tầm nhìn",
       "history": "Lịch sử DGS",
-      "our-team": "Đội ngủ DGS"
+      "our-team": "Đội ngũ DGS"
     },
     "academics": {
       "root": "Chương trình học",
@@ -56,7 +56,11 @@
     "studentWellBeing-2": "Chính sách bảo vệ trẻ em"
   },
   "AboutPage": {
-    "title": "Về chúng tôi"
+    "title": "Về chúng tôi",
+    "advisoryBoard": "Ban Cố Vấn",
+    "seniorLeadershipTeam": "Đội lãnh đạo nhà trường",
+    "middleSchool": "Đội ngũ THCS",
+    "highSchool": "Đội ngũ THPT"
   },
   "MetaData": {
     "title": "DGS School",
