@@ -4,7 +4,7 @@ import { TabContent } from './TabContent'
 const AboutPage = () => {
   return (
     <main className='flex flex-col w-full container xl:pb-40'>
-      <h3 className='xl:text-6xl font-bold my-5'>About</h3>
+      <h1 className='heading-1 my-5'>About</h1>
       <TabContent />
     </main>
   )

@@ -24,7 +24,7 @@ export const Testimonials = () => {
           <p className='text-white text-xs sm:text-base sm:mt-10 mt-6 relative z-[1]'>
             Judith Black
           </p>
-          <p className='text-white text-xs sm:text-base relative z-[1]'>
+          <p className='text-white/70 text-xs sm:text-base relative z-[1]'>
             CEO of Workcation
           </p>
         </div>

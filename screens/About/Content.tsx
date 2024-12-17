@@ -12,10 +12,10 @@ export const Content = ({
       <div className='relative w-full h-[300px] sm:h-[500px] rounded-lg overflow-hidden'>
         <Image src='https://picsum.photos/500' fill alt='bg' />
       </div>
-      <h3 className='lg:text-3xl text-xl font-bold lg:mt-8 lg:mb-6 mt-5 mb-3'>
+      <h3 className='heading-3 lg:mt-8 lg:mb-6 mt-5 mb-3'>
         {title}
       </h3>
-      <p className='text-base'>{description}</p>
+      <p className='leading-7'>{description}</p>
     </section>
   );
 };

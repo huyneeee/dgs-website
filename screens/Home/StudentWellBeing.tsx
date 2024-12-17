@@ -49,9 +49,9 @@ export const StudentWellBeing = () => {
         />
         <div className='absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2'>
           <FadeInBox className='flex items-center justify-center flex-col sm:gap-10 gap-6'>
-            <h3 className='xl:text-4xl font-bold text-white'>
+            <h2 className='heading-2 text-background min-w-max'>
               {t('HomePage.studentWellBeing-2')}
-            </h3>
+            </h2>
             <Button
               size='lg'
               className='rounded-lg bg-jungle hover:bg-jungle hover:brightness-90'

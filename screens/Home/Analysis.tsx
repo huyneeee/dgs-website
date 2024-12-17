@@ -45,7 +45,7 @@ const Item = ({
         <NumberFlow value={isInView ? number : 0} className='text-6xl' />
       )}
 
-      <p className='text-base text-gray-600 uppercase'>{title}</p>
+      <p className='muted uppercase'>{title}</p>
     </div>
   );
 };

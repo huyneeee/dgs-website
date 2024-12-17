@@ -51,7 +51,7 @@ export const CardPerson = ({
       <h5 className='text-base text-gray-900 mt-3 sm:mt-6 font-bold group-hover:text-jungle min-w-max'>
         {name}
       </h5>
-      <p className='text-sm text-gray-600 min-w-max'>{position}</p>
+      <p className='muted min-w-max'>{position}</p>
     </div>
   );
 };

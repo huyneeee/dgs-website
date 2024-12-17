@@ -46,11 +46,11 @@ const Item = ({ title, image, date }: (typeof Data)[0]) => {
       </div>
       <Link
         href='/'
-        className='sm:text-xl text-base line-clamp-2 group-hover:text-jungle group-hover:underline underline-offset-2'
+        className='sm:text-lg text-base line-clamp-2 group-hover:text-jungle group-hover:underline underline-offset-2'
       >
         {title}
       </Link>
-      <p className='text-sm text-gray-500'>
+      <p className='muted'>
         {format.dateTime(dateTime, {
           year: 'numeric',
           month: 'short',
@@ -65,9 +65,9 @@ export const News = () => {
   return (
     <section id='news' className='container xl:py-10 py-6'>
       <div className='flex items-center justify-between'>
-        <h4 className='xl:text-3xl lg:text-xl text-lg font-bold'>
+        <h3 className='heading-3'>
           The Latest News & Stories
-        </h4>
+        </h3>
         <Button variant='link'>
           <Link
             href={paths.home}

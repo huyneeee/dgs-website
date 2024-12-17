@@ -20,12 +20,12 @@ export const MainHero = () => {
       </video>
       <div className='container mx-auto'>
         <div className='flex flex-col absolute top-1/2 -translate-y-1/2 z-[2] xl:gap-16 gap-10'>
-          <h3 className='lg:text-7xl sm:text-5xl text-4xl text-white sm:max-w-[60%] font-extrabold'>
+          <h3 className='lg:text-7xl sm:text-5xl text-4xl text-background sm:max-w-[60%] font-extrabold'>
             {t('mainHeroDesc')}
           </h3>
           <Link
             href='/'
-            className='text-white text-lg sm:text-xl uppercase pb-2 border-b-4 border-white w-fit font-bold font-sans hover:text-bamboo hover:border-bamboo'
+            className='text-background text-lg sm:text-xl uppercase pb-2 border-b-4 border-background w-fit font-bold font-sans hover:text-bamboo hover:border-bamboo'
           >
             {t('readMore')}
           </Link>

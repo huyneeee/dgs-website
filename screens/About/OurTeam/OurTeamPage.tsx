@@ -14,7 +14,7 @@ const OurTeam = () => {
   return (
     <section id='our-team' className='mt-8'>
       {/* advisoryBoard */}
-      <h3 className='lg:text-4xl text-2xl font-semibold text-gray-900 mb-4 lg:mb-6'>
+      <h3 className='heading-3 mb-4 lg:mb-6'>
         {t('advisoryBoard')}
       </h3>
       <div className='grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5'>
@@ -41,7 +41,7 @@ const OurTeam = () => {
       <div className='w-full h-[1px] bg-gray-400 my-6 lg:my-10' />
 
       {/* seniorLeadershipTeam */}
-      <h3 className='lg:text-4xl text-2xl font-semibold text-gray-900 mb-4 lg:mb-6'>
+      <h3 className='heading-3 mb-4 lg:mb-6'>
         {t('seniorLeadershipTeam')}
       </h3>
       <div className='grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5'>
@@ -67,7 +67,7 @@ const OurTeam = () => {
       <div className='w-full h-[1px] bg-gray-400 my-6 lg:my-10' />
 
       {/* highSchool */}
-      <h3 className='lg:text-4xl text-2xl font-semibold text-gray-900 mb-4 lg:mb-6'>
+      <h3 className='heading-3 mb-4 lg:mb-6'>
         {t('highSchool')}
       </h3>
       <div className='w-full grid xl:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-5'>
