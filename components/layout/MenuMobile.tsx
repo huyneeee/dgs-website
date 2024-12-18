@@ -46,7 +46,7 @@ const MenuMobile = () => {
   return (
     <Sheet open={isOpen} modal={false} onOpenChange={(open) => setIsOpen(open)}>
       <SheetTrigger asChild>
-        <Button variant='ghost' className='xl:hidden flex'>
+        <Button variant='ghost' aria-label='Menu' title='Menu' className='xl:hidden flex'>
           <Menu size={24} />
         </Button>
       </SheetTrigger>

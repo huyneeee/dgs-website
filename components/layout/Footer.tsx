@@ -81,7 +81,7 @@ export const Footer = () => {
               <Link
                 href={item.link}
                 key={key}
-                className='text-base text-white/70 font-light hover:text-white hover:underline underline-offset-2'
+                className='text-base font-light hover:underline underline-offset-2'
               >
                 {item.text}
               </Link>
@@ -94,7 +94,7 @@ export const Footer = () => {
               <Link
                 href={item.link}
                 key={key}
-                className='text-sm text-white/70 font-light hover:text-white hover:underline underline-offset-2'
+                className='text-sm font-light hover:underline underline-offset-2'
               >
                 {item.text}
               </Link>
@@ -103,13 +103,13 @@ export const Footer = () => {
 
           <div className='flex flex-col text-white gap-3 max-sm:w-full'>
             <p className='text-base font-bold'>Head Office</p>
-            <a href='phone:0989123456' className='flex items-center gap-1 text-base text-white/70 font-light hover:text-white hover:underline underline-offset-2'>
+            <a href='phone:0989123456' className='flex items-center gap-1 text-base font-light hover:underline underline-offset-2'>
               <Smartphone />
               0989123456
             </a>
             <a
               href='mailto:office@dgs.org.vn'
-              className='flex items-center gap-1 text-base text-white/70 font-light hover:text-white hover:underline underline-offset-2'
+              className='flex items-center gap-1 text-base font-light hover:underline underline-offset-2'
             >
               <Mail />
               office@dgs.org.vn
@@ -117,7 +117,7 @@ export const Footer = () => {
             <a
               href='https://www.google.com/maps/dir//LC,+L%C3%B4+H3,+khu+%C4%91%C3%B4+th%E1%BB%8B+Starlake,+B%E1%BA%AFc+T%E1%BB%AB+Li%C3%AAm,+H%C3%A0+N%E1%BB%99i+11900/@21.055627,105.7102985,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3135abe983b20481:0x1a9d3d4234f79268!2m2!1d105.7927002!2d21.0556469?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D'
               target='_blank'
-              className='flex items-start gap-1 sm:max-w-[300px] text-base text-white/70 font-light hover:text-white hover:underline underline-offset-2'
+              className='flex items-start gap-1 sm:max-w-[300px] text-base font-light hover:underline underline-offset-2'
             >
               <MapPinned className='shrink-0' />
               The Dewey Schools Tay Ho Tay Lot H3-LC, Starlake Tay Ho Tay
@@ -127,7 +127,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className='container flex items-center justify-center border-t border-white/40 sm:py-10 py-5'>
-        <p className='text-white/50 text-sm'>
+        <p className='text-background text-sm'>
           © 2024 DGS Country School | Privacy Policy
         </p>
       </div>

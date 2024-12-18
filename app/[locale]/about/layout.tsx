@@ -10,7 +10,7 @@ export default function AboutLayout({ children }: PropsWithChildren) {
     <main className='bg-[#fafafa] flex flex-col w-full container xl:pb-40 pb-20'>
       <Link
         href={paths.about.root}
-        className='text-4xl lg:text-6xl font-bold my-3 lg:my-5 hover:text-jungle'
+        className='heading-2 my-3 lg:my-5 hover:text-jungle'
       >
         {t('title')}
       </Link>

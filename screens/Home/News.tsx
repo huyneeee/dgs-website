@@ -1,5 +1,4 @@
 import { paths } from '@/app/router';
-import { Button } from '@/components/ui/button';
 import FadeInBox from '@/components/ui/fadein-box';
 import { Link } from '@/i18n/routing';
 import { useFormatter } from 'next-intl';
@@ -65,17 +64,13 @@ export const News = () => {
   return (
     <section id='news' className='container xl:py-10 py-6'>
       <div className='flex items-center justify-between'>
-        <h3 className='heading-3'>
-          The Latest News & Stories
-        </h3>
-        <Button variant='link'>
-          <Link
-            href={paths.home}
-            className='text-jungle text-xs xl:text-sm uppercase'
-          >
-            view all
-          </Link>
-        </Button>
+        <h3 className='heading-3'>The Latest News & Stories</h3>
+        <Link
+          href={paths.home}
+          className='text-jungle text-xs xl:text-sm uppercase hover:underline underline-offset-2'
+        >
+          view all
+        </Link>
       </div>
       <div className='flex items-center justify-between xl:gap-14 sm:gap-10 gap-8 mt-6 max-lg:flex-col'>
         {Data.map((item, key) => (
