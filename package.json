@@ -21,6 +21,7 @@
     "motion": "^11.13.5",
     "next": "15.0.4",
     "next-intl": "^3.26.0",
+    "qs": "^6.13.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.5.5",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/qs": "^6.9.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^8",
