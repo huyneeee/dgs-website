@@ -1,6 +1,6 @@
 'use server';
 
-export async function generateMetadataFromData(seos: SEO | null, favicon: Media | null) {
+export async function generateMetadataFromData(seos: SEO | null, favicon?: Media | null) {
   if (!seos) return;
   const urlImages =
     process.env.NEXT_PUBLIC_LANDING_URL + '/images/meta/opengraph-image.png';
