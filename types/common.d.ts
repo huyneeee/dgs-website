@@ -40,3 +40,24 @@ type Media = {
     medium: MediaFormat;
   };
 };
+
+type OpenGraph = {
+  id: number;
+  ogTitle: string;
+  ogDescription: string;
+  ogUrl: null | string;
+  ogType: null | string;
+  ogImage: null | Media;
+};
+
+type SEO = {
+  id: number;
+  metaTitle: string;
+  metaDescription: string;
+  keywords: null | string;
+  metaRobots: null | string;
+  metaViewport: null | string;
+  canonicalURL: null | string;
+  structuredData: null | string;
+  openGraph: OpenGraph | null;
+};

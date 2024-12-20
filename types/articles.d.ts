@@ -20,4 +20,5 @@ type Article = {
   cover: Media | null;
   author: Author;
   sections: Section[];
+  seos: SEO | null;
 };

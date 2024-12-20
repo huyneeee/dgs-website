@@ -1,35 +1,38 @@
-// import { STRAPI_MODEL } from '@/configs/revalidate-keys';
-// import { revalidatePath } from 'next/cache';
-// import type { NextRequest } from 'next/server';
+import { REVALIDATE_KEYS, STRAPI_MODEL } from '@/configs/revalidate-keys';
+import { revalidateTag } from 'next/cache';
+import type { NextRequest } from 'next/server';
 
-// function getPageRoute(strapiModel: STRAPI_MODEL, slug: string) {}
+function getTagsRevalidate(model: STRAPI_MODEL) {
+  if (model === STRAPI_MODEL.Articles) return REVALIDATE_KEYS.articles;
+  if (model === STRAPI_MODEL.Global) return REVALIDATE_KEYS.global;
+}
 
-// export async function POST(request: NextRequest) {
-//   const searchParams = request.nextUrl.searchParams
-//   const secret = searchParams.get('secret')
+export async function POST(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
+  const secret = searchParams.get('secret');
 
-//   if (secret !== process.env.WEBHOOK_TOKEN) {
-//     return Response.json('Invalid token', {
-//       status: 401,
-//     });
-//   }
+  if (secret !== process.env.WEBHOOK_TOKEN) {
+    return Response.json('Invalid token', {
+      status: 401,
+    });
+  }
 
-//   console.log('headers', request.body)
-//   try {
-//     const { entry, model } = request.body;
+  try {
+    const body = await request.json();
+    const { entry, model } = body;
+    const tags = getTagsRevalidate(model);
 
-//     if (!entry || !model)
-//       return Response.json({
-//         revalidated: false,
-//         now: Date.now(),
-//         message: 'Missing path to revalidate',
-//       });
+    if (!entry || !model || !tags) {
+      return Response.json({
+        revalidated: false,
+        now: Date.now(),
+        message: 'Missing path to revalidate',
+      });
+    }
 
-//     const { slug } = entry;
-
-//     // revalidatePath(path)
-//     return Response.json({ revalidated: true, now: Date.now() });
-//   } catch (error) {
-//     console.log('error', error);
-//   }
-// }
+    revalidateTag(tags);
+    return Response.json({ revalidated: true, now: Date.now() });
+  } catch (error) {
+    console.log('error', error);
+  }
+}

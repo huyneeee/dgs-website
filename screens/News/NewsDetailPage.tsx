@@ -8,7 +8,6 @@ const NewsDetailPage = async ({
   const { slug, locale } = await params;
   const dataNews = await articleAPI.getDetailArticle(locale, slug);
 
-
   return (
     <div>
       NewsDetailPage
