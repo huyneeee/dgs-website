@@ -18,7 +18,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Omit<Props, 'children'>) {
   const { locale } = await params;
   const data = await metaDataAPI.getMetaDataSite(locale);
-  return generateMetadataFromData(data.data.seos, data.data.favicon);
+  return generateMetadataFromData(data.data?.seos, data.data.favicon);
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
