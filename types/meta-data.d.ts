@@ -3,6 +3,6 @@ type MetaData = {
   documentId: string;
   siteName: string;
   siteDescription: string;
-  favicon: Media;
-  seos: SEO;
+  favicon: Media | null;
+  seos: SEO | null;
 };
