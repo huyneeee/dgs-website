@@ -16,7 +16,7 @@
       "kindergarten": "Chương trình mẫu giáo",
       "primary-school": "Chương trình tiểu học",
       "middle-school": "Trung học cơ sở",
-      "hight-school": "Trung học phổ thông",
+      "high-school": "Trung học phổ thông",
       "college-counselling": "Tư vấn đại học"
     },
     "co-curriculars": {
@@ -61,6 +61,27 @@
     "seniorLeadershipTeam": "Đội lãnh đạo nhà trường",
     "middleSchool": "Đội ngũ THCS",
     "highSchool": "Đội ngũ THPT"
+  },
+  "Academics": {
+    "title": "Chương trình học",
+    "kindergarten": "Mẫu giáo",
+    "primary-school": "Tiểu học",
+    "middle-school": "Trung học cơ sở",
+    "high-school": "Trung học phổ thông",
+    "college-counseling": "Tư vấn đại học"
+  },
+  "CoCurriculars": {
+    "title": "Hoạt động ngoại khóa",
+    "club-activities": "Câu lạc bộ và hoạt động ngoại khóa",
+    "advisory": "Chương trình Advisory",
+    "experiential-education": "Giáo dục trải nghiệm",
+    "dgs-sport-program": "Chương trình thể thao tại DGS"
+  },
+  "student-life": {
+    "root": "Sức khỏe và sự an toàn của học sinh",
+    "student-well-being": "Sức khỏe và sự an toàn của học sinh",
+    "cpoms": "CPOMS",
+    "leadership-opportunities": "Cơ hội phát triển kỹ năng lãnh đạo"
   },
   "MetaData": {
     "title": "DGS School",

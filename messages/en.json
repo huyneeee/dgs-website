@@ -16,14 +16,15 @@
       "kindergarten": "Kindergarten",
       "primary-school": "Primary School",
       "middle-school": "Middle School",
-      "hight-school": "High School",
+      "high-school": "High School",
       "college-counselling": "College Counseling"
     },
     "co-curriculars": {
       "root": "Co Curriculars",
       "advisory": "Advisory",
       "club-and-activities": "Club and Activities",
-      "experiential-education": "Experiential Education"
+      "experiential-education": "Experiential Education",
+      "dgs-sport-program": "DGS Sport Program"
     },
     "admissions": {
       "root": "Admissions",
@@ -31,8 +32,9 @@
       "admission-process": "Admission Process",
       "contact-admission": "Contact Admission"
     },
-    "student-well-being": {
-      "root": "Student Well-being",
+    "student-life": {
+      "root": "Student Life",
+      "student-well-being": "Student Well-being",
       "cpoms": "CPOMS",
       "leadership-opportunities": "Leadership Opportunities"
     },
@@ -61,6 +63,26 @@
     "seniorLeadershipTeam": "Senior Leadership Team",
     "middleSchool": "Middle School",
     "highSchool": "High School"
+  },
+  "Academics": {
+    "title": "Academics",
+    "kindergarten": "Kindergarten",
+    "primary-school": "Primary School",
+    "middle-school": "Middle School",
+    "high-school": "High School",
+    "college-counseling": "College Counseling"
+  },
+  "CoCurriculars": {
+    "title": "Co Curriculars",
+    "club-activities": "Club & Activities",
+    "advisory": "Advisory",
+    "experiential-education": "Experiential Education "
+  },
+  "StudentLife": {
+    "title": "Student Life",
+    "student-well-being": "Student Well-being",
+    "cpoms": "CPOMS",
+    "leadership-opportunities": "Leadership Opportunities"
   },
   "MetaData": {
     "title": "DGS School",
