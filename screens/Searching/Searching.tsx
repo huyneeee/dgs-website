@@ -8,22 +8,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import useSearching from '@/hooks/useSearching';
 import { usePathname, useRouter } from '@/i18n/routing';
 import { Search, X } from 'lucide-react';
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
 const Searching = () => {
+  const [{ isOpen, input, data, isValidating }, { setInput, setIsOpen }] =
+    useSearching();
+
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const search = searchParams.get('q');
-  const [isOpen, setIsOpen] = useState(true);
   const { replace } = useRouter();
-
-  useEffect(() => {
-    setIsOpen(typeof search === 'string');
-  }, [search]);
-
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger className='hidden'>Open</DialogTrigger>
@@ -39,10 +33,11 @@ const Searching = () => {
           <div className='bg-bamboo/10 py-3 flex items-center xl:px-0 px-5'>
             <div className='w-full xl:max-w-[700px] mx-auto relative'>
               <input
-                defaultValue={search || ''}
+                defaultValue={input}
                 type='text'
                 className='placeholder:text-jungle font-semibold w-full h-full border-jungle border text-jungle rounded-md p-4 bg-transparent outline-none'
                 placeholder='What are you looking for ?'
+                onChange={(e) => setInput(e.target.value)}
               />
               <div className='absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer'>
                 <Search size={24} className='text-jungle' />
@@ -64,6 +59,13 @@ const Searching = () => {
               <span className='xl:block hidden'>Close</span>
             </Button>
           </div>
+          {isValidating ? (
+            <p>Searching...</p>
+          ) : (
+            <div className='flex-auto overflow-scroll'>
+              {JSON.stringify(data, null)}
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>
