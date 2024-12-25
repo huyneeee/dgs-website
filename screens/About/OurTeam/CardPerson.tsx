@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn, getImageLink } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
@@ -38,7 +38,7 @@ export const CardPerson = ({
         )}
       >
         <Image
-          src={avatarUrl}
+          src={getImageLink(avatarUrl)}
           alt="avatar"
           fill
           sizes="33%vw"
