@@ -7,4 +7,5 @@ import { STRAPI_MODEL } from './revalidate-keys';
 
 export const SEARCHING_PAGE_PATH = {
   [STRAPI_MODEL.Articles]: paths.about,
+  [STRAPI_MODEL.Teammember]: paths.about['our-team'],
 };
