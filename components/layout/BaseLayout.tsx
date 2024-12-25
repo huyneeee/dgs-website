@@ -25,11 +25,11 @@ export default async function BaseLayout({ children, locale }: Props) {
   const messages = await getMessages();
 
   return (
-    <html className='h-full scroll-smooth' lang={locale}>
+    <html className="h-full scroll-smooth" lang={locale}>
       <body className={cn(franklin.className, 'flex h-full flex-col')}>
         <NextIntlClientProvider messages={messages}>
           <LazyMotion features={domAnimation}>
-            <Navigation type='normal' />
+            <Navigation type="normal" />
             {children}
             <Searching />
             <Footer />

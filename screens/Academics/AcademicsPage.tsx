@@ -1,5 +1,5 @@
-import { TabContent } from "@/components/layout/TabContent";
-import { tabs } from "@/configs/tabs";
+import { TabContent } from '@/components/layout/TabContent';
+import { tabs } from '@/configs/tabs';
 
 const AcademicsPage = () => {
   return (

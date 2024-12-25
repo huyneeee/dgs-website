@@ -1,1 +1,1 @@
-export { default } from "@/screens/CoCurriculars/Advisory/Advisory";
+export { default } from '@/screens/CoCurriculars/Advisory/Advisory';

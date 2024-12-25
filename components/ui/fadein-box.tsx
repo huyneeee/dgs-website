@@ -44,14 +44,14 @@ const FadeInBox = ({
   return (
     <m.div
       className={className}
-      initial='hide'
+      initial="hide"
       variants={variants}
       transition={{
         duration: 0.3,
         ease: 'easeIn',
         ...transitions,
       }}
-      whileInView='show'
+      whileInView="show"
       viewport={{
         once: true,
         ...viewport,

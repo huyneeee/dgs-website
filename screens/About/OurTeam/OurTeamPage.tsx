@@ -12,112 +12,106 @@ const OurTeam = () => {
     setDetail(true);
   };
   return (
-    <section id='our-team' className='mt-8'>
+    <section id="our-team" className="mt-8">
       {/* advisoryBoard */}
-      <h3 className='heading-3 mb-4 lg:mb-6'>
-        {t('advisoryBoard')}
-      </h3>
-      <div className='grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5'>
+      <h3 className="heading-3 mb-4 lg:mb-6">{t('advisoryBoard')}</h3>
+      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
         <CardPerson
-          name='Whitney Francis'
-          position='Copywriter'
-          avatarUrl='https://images.unsplash.com/photo-1502685104226-ee32379fefbe'
+          name="Whitney Francis"
+          position="Copywriter"
+          avatarUrl="https://images.unsplash.com/photo-1502685104226-ee32379fefbe"
           onClick={handleClickDetail}
         />
         <CardPerson
-          name='Michael Foster'
-          position='Co-Founder / CTO'
-          avatarUrl='https://images.unsplash.com/photo-1519244703995-f4e0f30006d5'
+          name="Michael Foster"
+          position="Co-Founder / CTO"
+          avatarUrl="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5"
           onClick={handleClickDetail}
         />
         <CardPerson
-          name='Courtney Henry'
-          position='Designer'
-          avatarUrl='https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
+          name="Courtney Henry"
+          position="Designer"
+          avatarUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
           onClick={handleClickDetail}
         />
       </div>
 
-      <div className='w-full h-[1px] bg-gray-400 my-6 lg:my-10' />
+      <div className="w-full h-[1px] bg-gray-400 my-6 lg:my-10" />
 
       {/* seniorLeadershipTeam */}
-      <h3 className='heading-3 mb-4 lg:mb-6'>
-        {t('seniorLeadershipTeam')}
-      </h3>
-      <div className='grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5'>
+      <h3 className="heading-3 mb-4 lg:mb-6">{t('seniorLeadershipTeam')}</h3>
+      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
         <CardPerson
-          name='Whitney Francis'
-          position='Copywriter'
-          avatarUrl='https://images.unsplash.com/photo-1502685104226-ee32379fefbe'
+          name="Whitney Francis"
+          position="Copywriter"
+          avatarUrl="https://images.unsplash.com/photo-1502685104226-ee32379fefbe"
           onClick={handleClickDetail}
         />
         <CardPerson
-          name='Michael Foster'
-          position='Co-Founder / CTO'
-          avatarUrl='https://images.unsplash.com/photo-1519244703995-f4e0f30006d5'
+          name="Michael Foster"
+          position="Co-Founder / CTO"
+          avatarUrl="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5"
           onClick={handleClickDetail}
         />
         <CardPerson
-          name='Courtney Henry'
-          position='Designer'
-          avatarUrl='https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
+          name="Courtney Henry"
+          position="Designer"
+          avatarUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
           onClick={handleClickDetail}
         />
       </div>
-      <div className='w-full h-[1px] bg-gray-400 my-6 lg:my-10' />
+      <div className="w-full h-[1px] bg-gray-400 my-6 lg:my-10" />
 
       {/* highSchool */}
-      <h3 className='heading-3 mb-4 lg:mb-6'>
-        {t('highSchool')}
-      </h3>
-      <div className='w-full grid xl:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-5'>
+      <h3 className="heading-3 mb-4 lg:mb-6">{t('highSchool')}</h3>
+      <div className="w-full grid xl:grid-cols-6 sm:grid-cols-4 grid-cols-2 gap-5">
         <CardPerson
-          type='circle'
-          name='Whitney Francis'
-          position='Copywriter'
-          avatarUrl='https://images.unsplash.com/photo-1502685104226-ee32379fefbe'
+          type="circle"
+          name="Whitney Francis"
+          position="Copywriter"
+          avatarUrl="https://images.unsplash.com/photo-1502685104226-ee32379fefbe"
           onClick={handleClickDetail}
-          size='sm'
+          size="sm"
         />
         <CardPerson
-          type='circle'
-          name='Michael Foster'
-          position='Co-Founder / CTO'
-          avatarUrl='https://images.unsplash.com/photo-1519244703995-f4e0f30006d5'
+          type="circle"
+          name="Michael Foster"
+          position="Co-Founder / CTO"
+          avatarUrl="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5"
           onClick={handleClickDetail}
-          size='sm'
+          size="sm"
         />
         <CardPerson
-          type='circle'
-          name='Courtney Henry'
-          position='Designer'
-          avatarUrl='https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
+          type="circle"
+          name="Courtney Henry"
+          position="Designer"
+          avatarUrl="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
           onClick={handleClickDetail}
-          size='sm'
+          size="sm"
         />
         <CardPerson
-          type='circle'
-          name='Leonard Krasner'
-          position='Senior Designer'
-          avatarUrl='https://images.unsplash.com/photo-1519345182560-3f2917c472ef'
+          type="circle"
+          name="Leonard Krasner"
+          position="Senior Designer"
+          avatarUrl="https://images.unsplash.com/photo-1519345182560-3f2917c472ef"
           onClick={handleClickDetail}
-          size='sm'
+          size="sm"
         />
         <CardPerson
-          type='circle'
-          name='Emily Selman'
-          position='VP, User Experience'
-          avatarUrl='https://images.unsplash.com/photo-1502685104226-ee32379fefbe'
+          type="circle"
+          name="Emily Selman"
+          position="VP, User Experience"
+          avatarUrl="https://images.unsplash.com/photo-1502685104226-ee32379fefbe"
           onClick={handleClickDetail}
-          size='sm'
+          size="sm"
         />
         <CardPerson
-          type='circle'
-          name='Alicia Bell'
-          position='Junior Copywriter'
-          avatarUrl='https://images.unsplash.com/photo-1509783236416-c9ad59bae472'
+          type="circle"
+          name="Alicia Bell"
+          position="Junior Copywriter"
+          avatarUrl="https://images.unsplash.com/photo-1509783236416-c9ad59bae472"
           onClick={handleClickDetail}
-          size='sm'
+          size="sm"
         />
       </div>
 

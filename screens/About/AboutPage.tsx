@@ -1,6 +1,6 @@
-import { TabContent } from "@/components/layout/TabContent";
-import { tabs } from "@/configs/tabs";
-import React from "react";
+import { TabContent } from '@/components/layout/TabContent';
+import { tabs } from '@/configs/tabs';
+import React from 'react';
 
 const AboutPage = () => {
   return (

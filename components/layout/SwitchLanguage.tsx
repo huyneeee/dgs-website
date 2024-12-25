@@ -24,13 +24,13 @@ const SwitchLanguage = ({ className = '' }) => {
 
   return (
     <div className={cn('flex items-center gap-3', className)}>
-      <p className='text-sm'>{t('language')}: </p>
-      <div className='flex items-center gap-2'>
+      <p className="text-sm">{t('language')}: </p>
+      <div className="flex items-center gap-2">
         <div
           onClick={() => onSelectChange('en')}
           className={cn(
             'w-5 h-5 rounded-full box-content cursor-pointer',
-            locale === 'en' ? 'grayscale-0 border border-bamboo' : 'grayscale'
+            locale === 'en' ? 'grayscale-0 border border-bamboo' : 'grayscale',
           )}
         >
           <USFlag />
@@ -39,7 +39,7 @@ const SwitchLanguage = ({ className = '' }) => {
           onClick={() => onSelectChange('vi')}
           className={cn(
             'w-5 h-5 rounded-full box-content cursor-pointer',
-            locale === 'vi' ? 'grayscale-0 border border-bamboo' : 'grayscale'
+            locale === 'vi' ? 'grayscale-0 border border-bamboo' : 'grayscale',
           )}
         >
           <VNFlag />

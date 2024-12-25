@@ -1,1 +1,1 @@
-export { default } from "@/screens/CoCurriculars/ClubAndActivities/ClubAndActivities";
+export { default } from '@/screens/CoCurriculars/ClubAndActivities/ClubAndActivities';

@@ -28,28 +28,28 @@ const Navigation = ({
         'flex container sm:py-10 py-5 justify-between items-center',
         type === 'transparent' &&
           'absolute w-full top-0 left-0 z-20 text-white',
-        type === 'normal' && 'relative text-black'
+        type === 'normal' && 'relative text-black',
       )}
     >
-      <Link href={'/'} className='flex-shrink-0'>
+      <Link href={'/'} className="flex-shrink-0">
         <Image
-          src='/images/logos/logo-4.png'
-          alt='logo'
+          src="/images/logos/logo-4.png"
+          alt="logo"
           width={175}
           height={72}
           priority
-          className='xl:w-[175px] xl:h-[72px] w-[87px] h-[36px]'
+          className="xl:w-[175px] xl:h-[72px] w-[87px] h-[36px]"
         />
       </Link>
-      <div className='items-center gap-2 hidden xl:flex'>
-        <nav className='flex items-center justify-between flex-auto gap-4'>
+      <div className="items-center gap-2 hidden xl:flex">
+        <nav className="flex items-center justify-between flex-auto gap-4">
           {DATA.map((nav, key) => {
             if (Object.keys(nav[1]).length === 1) {
               return (
                 <Link
                   key={key}
                   href={(nav[1] as any).root}
-                  className='hover:text-jungle px-0 underline-offset-4 hover:underline'
+                  className="hover:text-jungle px-0 underline-offset-4 hover:underline"
                 >
                   {t(`${nav[0]}.root` as any)}
                 </Link>
@@ -61,18 +61,18 @@ const Navigation = ({
                 <HoverCardTrigger asChild>
                   <Button
                     variant={'link'}
-                    className='hover:text-jungle px-0 data-[state=open]:text-jungle text-current'
+                    className="hover:text-jungle px-0 data-[state=open]:text-jungle text-current"
                   >
                     {t(`${nav[0]}.root` as any)}
-                    <ChevronDown size={14} className='hover:rotate-180' />
+                    <ChevronDown size={14} className="hover:rotate-180" />
                   </Button>
                 </HoverCardTrigger>
-                <HoverCardContent className='min-w-max flex flex-col gap-3'>
+                <HoverCardContent className="min-w-max flex flex-col gap-3">
                   {Object.entries(nav[1])
                     .slice(1)
                     .map((navChild, keyChild) => (
                       <Link
-                        className='hover:text-jungle hover:font-semibold hover:underline pb-1'
+                        className="hover:text-jungle hover:font-semibold hover:underline pb-1"
                         key={`${key}-${keyChild}`}
                         href={navChild[1]}
                       >
@@ -98,7 +98,7 @@ const Navigation = ({
       </div>
 
       <MenuMobile />
-      <SwitchLanguage className='absolute right-10 bottom-8 max-xl:hidden' />
+      <SwitchLanguage className="absolute right-10 bottom-8 max-xl:hidden" />
     </header>
   );
 };

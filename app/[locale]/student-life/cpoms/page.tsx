@@ -1,1 +1,1 @@
-export { default } from "@/screens/StudentLife/Cpoms/Cpoms";
+export { default } from '@/screens/StudentLife/Cpoms/Cpoms';

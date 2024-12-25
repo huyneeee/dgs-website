@@ -19,7 +19,7 @@ export const CardPerson = ({
   name,
   position,
   className,
-  onClick
+  onClick,
 }: PropsCardPerson) => {
   return (
     <div
@@ -27,31 +27,31 @@ export const CardPerson = ({
       className={cn(
         'flex flex-col group cursor-pointer',
         type === 'circle' && 'justify-center items-center',
-        className
+        className,
       )}
     >
       <div
         className={cn(
           'relative w-full h-[300px]',
           type === 'circle' && 'aspect-square',
-          size === 'sm' && 'h-24 w-24'
+          size === 'sm' && 'h-24 w-24',
         )}
       >
         <Image
           src={avatarUrl}
-          alt='avatar'
+          alt="avatar"
           fill
-          sizes='33%vw'
+          sizes="33%vw"
           className={cn(
             'object-cover rounded-3xl group-hover:brightness-50',
-            type === 'circle' && 'rounded-full'
+            type === 'circle' && 'rounded-full',
           )}
         />
       </div>
-      <h5 className='text-base text-gray-900 mt-3 sm:mt-6 font-bold group-hover:text-jungle min-w-max'>
+      <h5 className="text-base text-gray-900 mt-3 sm:mt-6 font-bold group-hover:text-jungle min-w-max">
         {name}
       </h5>
-      <p className='muted min-w-max'>{position}</p>
+      <p className="muted min-w-max">{position}</p>
     </div>
   );
 };

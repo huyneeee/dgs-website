@@ -10,7 +10,7 @@ const getMetaDataSite = async (locale: string) => {
     {
       encodeValuesOnly: true,
       skipNulls: true,
-    }
+    },
   );
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/global?${query}`,
@@ -19,7 +19,7 @@ const getMetaDataSite = async (locale: string) => {
         tags: [REVALIDATE_KEYS.global],
       },
       cache: 'force-cache',
-    }
+    },
   );
   const data = await res.json();
   return data as ResponseStrapi<MetaData>;

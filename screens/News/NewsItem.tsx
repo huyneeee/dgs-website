@@ -10,24 +10,24 @@ const NewsItem = ({ title, cover, publishedAt, slug }: Article) => {
   const dateTime = new Date(publishedAt);
 
   return (
-    <FadeInBox className='flex flex-col flex-1 xl:gap-3 gap-2 group cursor-pointer'>
-      <div className='relative w-full aspect-[3/2] rounded-lg overflow-hidden'>
+    <FadeInBox className="flex flex-col flex-1 xl:gap-3 gap-2 group cursor-pointer">
+      <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
         <Image
           src={cover?.url || ''}
-          alt='img-new'
+          alt="img-new"
           fill
-          className='group-hover:scale-110 transition-transform duration-500 ease-linear'
-          sizes='33vw'
+          className="group-hover:scale-110 transition-transform duration-500 ease-linear"
+          sizes="33vw"
           loader={strapiLoaderImg}
         />
       </div>
       <Link
         href={`${paths.resources['news-and-events']}/${slug}`}
-        className='sm:text-lg text-base line-clamp-2 group-hover:text-jungle group-hover:underline underline-offset-2'
+        className="sm:text-lg text-base line-clamp-2 group-hover:text-jungle group-hover:underline underline-offset-2"
       >
         {title}
       </Link>
-      <p className='muted'>
+      <p className="muted">
         {format.dateTime(dateTime, {
           year: 'numeric',
           month: 'short',

@@ -1,1 +1,1 @@
-export { default } from "@/screens/CoCurriculars/ExperientialEducation/ExperientialEducation";
+export { default } from '@/screens/CoCurriculars/ExperientialEducation/ExperientialEducation';

@@ -35,7 +35,7 @@ const useSearching = () => {
       : null,
     ({ args }) =>
       client.multiSearch({
-        queries: listIndexes.map((item) => ({
+        queries: listIndexes.map(item => ({
           indexUid: item,
           q: args.search,
         })),
@@ -43,7 +43,7 @@ const useSearching = () => {
     {
       refreshInterval: 0,
       revalidateOnFocus: false,
-    }
+    },
   );
 
   useEffect(() => {

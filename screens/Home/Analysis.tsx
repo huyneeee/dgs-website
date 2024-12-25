@@ -29,23 +29,23 @@ const Item = ({
 }: (typeof Data)[0] & { isInView: boolean }) => {
   const arrNumber = typeof number === 'string' ? number.split(':') : [];
   return (
-    <div className='flex-1 flex flex-col items-center justify-center'>
+    <div className="flex-1 flex flex-col items-center justify-center">
       {typeof number === 'string' ? (
         <NumberFlowGroup>
-          <div className='flex items-center gap-2'>
+          <div className="flex items-center gap-2">
             {arrNumber.map((n, key) => (
               <React.Fragment key={key}>
-                <NumberFlow value={isInView ? +n : 0} className='text-6xl' />
-                {key === 0 && <span className='text-6xl'>:</span>}
+                <NumberFlow value={isInView ? +n : 0} className="text-6xl" />
+                {key === 0 && <span className="text-6xl">:</span>}
               </React.Fragment>
             ))}
           </div>
         </NumberFlowGroup>
       ) : (
-        <NumberFlow value={isInView ? number : 0} className='text-6xl' />
+        <NumberFlow value={isInView ? number : 0} className="text-6xl" />
       )}
 
-      <p className='muted uppercase'>{title}</p>
+      <p className="muted uppercase">{title}</p>
     </div>
   );
 };
@@ -56,8 +56,8 @@ export const Analysis = () => {
   });
 
   return (
-    <section ref={ref} id='analysis' className='container xl:py-10 py-6'>
-      <div className='grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 gap-10 w-full'>
+    <section ref={ref} id="analysis" className="container xl:py-10 py-6">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 gap-10 w-full">
         {Data.map((item, key) => (
           <Item key={key} {...item} isInView={isInView} />
         ))}

@@ -6,7 +6,7 @@ import { Testimonials } from './Testimonials';
 
 const HomePage = () => {
   return (
-    <main className='flex flex-col w-full'>
+    <main className="flex flex-col w-full">
       <MainHero />
       <News />
       <Testimonials />

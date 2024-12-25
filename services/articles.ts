@@ -14,7 +14,7 @@ const getArticle = async (locale: string, limit = 3) => {
     {
       encodeValuesOnly: true,
       skipNulls: true,
-    }
+    },
   );
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?${query}`,
@@ -23,7 +23,7 @@ const getArticle = async (locale: string, limit = 3) => {
         tags: [REVALIDATE_KEYS.articles],
       },
       cache: 'force-cache',
-    }
+    },
   );
   const data = await res.json();
   return data as ResponseStrapi<Article[]>;
@@ -43,7 +43,7 @@ const getDetailArticle = async (locale: string, slug: string) => {
     {
       encodeValuesOnly: true,
       skipNulls: true,
-    }
+    },
   );
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?${query}`,
@@ -52,7 +52,7 @@ const getDetailArticle = async (locale: string, slug: string) => {
         tags: [REVALIDATE_KEYS.articles],
       },
       cache: 'force-cache',
-    }
+    },
   );
   const data = await res.json();
   return data as ResponseStrapi<Article[]>;
@@ -72,7 +72,7 @@ const getMetaDataArticle = async (locale: string, slug: string) => {
     {
       encodeValuesOnly: true,
       skipNulls: true,
-    }
+    },
   );
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?${query}`,
@@ -81,7 +81,7 @@ const getMetaDataArticle = async (locale: string, slug: string) => {
         tags: [REVALIDATE_KEYS.articles],
       },
       cache: 'force-cache',
-    }
+    },
   );
   const data = await res.json();
   return data as ResponseStrapi<Article[]>;
