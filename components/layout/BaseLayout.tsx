@@ -4,14 +4,14 @@ import { cn } from '@/lib/utils';
 import { LazyMotion, domAnimation } from 'motion/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Libre_Franklin } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { ReactNode } from 'react';
 import { Footer } from './Footer';
 
-const franklin = Libre_Franklin({
+const franklin = Montserrat({
   subsets: ['latin', 'vietnamese'],
   display: 'swap',
-  variable: '--font-libre-franklin',
+  variable: '--font-montserrat',
 });
 
 type Props = {

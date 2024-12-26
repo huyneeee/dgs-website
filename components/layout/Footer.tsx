@@ -1,7 +1,9 @@
+import { paths } from '@/app/router';
 import { Link } from '@/i18n/routing';
 import { Mail, MapPinned, Smartphone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import SwitchLanguage from './SwitchLanguage';
 
 const Socials = [
   {
@@ -131,9 +133,17 @@ export const Footer = () => {
       </div>
       <div className="container flex items-center justify-center border-t border-white/40 sm:py-10 py-5">
         <p className="text-background text-sm">
-          © 2024 DGS Country School | Privacy Policy
+          © 2024 DGS Country School |{' '}
+          <Link
+            className="underline opacity-60 hover:opacity-100"
+            href={'/privacy-policy'}
+          >
+            {t('PrivacyPolicy.title')}
+          </Link>
         </p>
       </div>
+
+      <SwitchLanguage className="fixed right-8 bottom-0 z-[999999]" />
     </footer>
   );
 };

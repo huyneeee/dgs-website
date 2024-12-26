@@ -20,7 +20,7 @@ export const News = () => {
           view all
         </Link>
       </div>
-      <div className="flex items-center justify-between xl:gap-14 sm:gap-10 gap-8 mt-6 max-lg:flex-col">
+      <div className="flex items-center justify-between w-full xl:gap-14 sm:gap-10 gap-8 mt-6 max-lg:flex-col">
         {(data.data || []).map((item, key) => (
           <NewsItem {...item} key={key} />
         ))}

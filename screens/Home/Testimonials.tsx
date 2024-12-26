@@ -14,7 +14,7 @@ export const Testimonials = () => {
             sizes="50vw"
           />
 
-          <h2 className="xl:text-3xl sm:text-2xl text-xl font-normal text-white xl:leading-relaxed sm:leading-relaxed leading-relaxed relative z-[1]">
+          <h2 className="xl:text-3xl sm:text-2xl text-xl font-normal text-white xl:leading-relaxed sm:leading-relaxed leading-relaxed relative z-[1] italic">
             “ DGS is an extraordinary place relentlessly committed to helping
             students achieve the confidence, competence, and commitment to make
             the world a better place. We know that when your community supports

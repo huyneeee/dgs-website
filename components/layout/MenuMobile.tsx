@@ -67,7 +67,7 @@ const MenuMobile = () => {
             width={87}
             height={36}
             priority
-            className="w-[87px] h-[36px]"
+            className="w-[101px] h-[42px]"
           />
           <Button onClick={() => setIsOpen(false)} variant="ghost" size="icon">
             <X size={24} />

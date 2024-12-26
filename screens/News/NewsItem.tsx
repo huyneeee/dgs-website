@@ -10,7 +10,7 @@ const NewsItem = ({ title, cover, publishedAt, slug }: Article) => {
   const dateTime = new Date(publishedAt);
 
   return (
-    <FadeInBox className="flex flex-col flex-1 xl:gap-3 gap-2 group cursor-pointer">
+    <FadeInBox className="flex flex-col flex-1 xl:gap-3 gap-2 group cursor-pointer w-full">
       <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
         <Image
           src={cover?.url || ''}

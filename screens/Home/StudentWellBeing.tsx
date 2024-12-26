@@ -11,7 +11,7 @@ export const StudentWellBeing = () => {
   return (
     <section
       id="student-well-being"
-      className="flex items-center flex-col container sm:my-10 my-5 xl:gap-20 gap-10"
+      className="flex items-center flex-col container sm:my-10 my-5 gap-10"
     >
       <FadeInBox
         hide={{
@@ -26,19 +26,21 @@ export const StudentWellBeing = () => {
           duration: 0.5,
         }}
       >
-        <div className="flex items-center xl:gap-16 lg:flex-row-reverse flex-col-reverse max-lg:gap-10">
-          <h3 className="xl:text-4xl sm:text-2xl text-lg italic max-lg:text-center">
+        <div className="flex items-center gap-4 md:gap-10 lg:flex-row-reverse flex-col-reverse">
+          <h3 className="xl:text-4xl sm:text-2xl text-lg max-lg:text-center">
             {t('HomePage.studentWellBeing-1')}
           </h3>
-          <Image
-            src="/images/student-well-being/kid-1.jpg"
-            alt="kid-1"
-            width={500}
-            height={350}
-            className="rounded-2xl"
-          />
+          <div className="aspect-[50/35] w-full relative">
+            <Image
+              src="/images/student-well-being/kid-1.jpg"
+              alt="kid-1"
+              fill
+              className="rounded-2xl"
+            />
+          </div>
         </div>
       </FadeInBox>
+
       <div className="flex items-center xl:gap-16 w-full h-[300px] xl:h-[500px] relative">
         <Image
           src="/images/student-well-being/kid-2.jpg"

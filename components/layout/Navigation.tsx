@@ -12,7 +12,6 @@ import { ChevronDown, Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import MenuMobile from './MenuMobile';
-import SwitchLanguage from './SwitchLanguage';
 
 const DATA = Object.entries(paths).slice(1); // skip Home
 
@@ -25,20 +24,20 @@ const Navigation = ({
   return (
     <header
       className={cn(
-        'flex container sm:py-10 py-5 justify-between items-center',
+        'sticky top-0 left-0 right-0 z-50 flex container py-3 lg:py-5 justify-between items-center bg-white',
         type === 'transparent' &&
           'absolute w-full top-0 left-0 z-20 text-white',
-        type === 'normal' && 'relative text-black',
+        type === 'normal' && 'text-black',
       )}
     >
       <Link href={'/'} className="flex-shrink-0">
         <Image
           src="/images/logos/logo-4.png"
           alt="logo"
-          width={175}
-          height={72}
+          width={219}
+          height={90}
           priority
-          className="xl:w-[175px] xl:h-[72px] w-[87px] h-[36px]"
+          className="md:w-[219px] md:h-[90px] w-[101px] h-[42px]"
         />
       </Link>
       <div className="items-center gap-2 hidden xl:flex">
@@ -98,7 +97,6 @@ const Navigation = ({
       </div>
 
       <MenuMobile />
-      <SwitchLanguage className="absolute right-10 bottom-8 max-xl:hidden" />
     </header>
   );
 };

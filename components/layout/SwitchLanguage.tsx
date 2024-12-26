@@ -2,12 +2,11 @@
 import { usePathname, useRouter } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import { USFlag, VNFlag } from '@/public/icons/Flags';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
 import React from 'react';
 
 const SwitchLanguage = ({ className = '' }) => {
-  const t = useTranslations();
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -24,26 +23,25 @@ const SwitchLanguage = ({ className = '' }) => {
 
   return (
     <div className={cn('flex items-center gap-3', className)}>
-      <p className="text-sm">{t('language')}: </p>
-      <div className="flex items-center gap-2">
-        <div
+      <div className="flex items-center gap-3 bg-green-500 p-2 rounded-md">
+        <button
           onClick={() => onSelectChange('en')}
           className={cn(
-            'w-5 h-5 rounded-full box-content cursor-pointer',
-            locale === 'en' ? 'grayscale-0 border border-bamboo' : 'grayscale',
+            'size-[32px] rounded-full box-content cursor-pointer border-[2px]',
+            locale === 'en' ? 'grayscale-0 border-yellow-300' : 'grayscale',
           )}
         >
           <USFlag />
-        </div>
-        <div
+        </button>
+        <button
           onClick={() => onSelectChange('vi')}
           className={cn(
-            'w-5 h-5 rounded-full box-content cursor-pointer',
-            locale === 'vi' ? 'grayscale-0 border border-bamboo' : 'grayscale',
+            'size-[32px] rounded-full box-content cursor-pointer border-[2px]',
+            locale === 'vi' ? 'grayscale-0 border-yellow-300' : 'grayscale',
           )}
         >
           <VNFlag />
-        </div>
+        </button>
       </div>
     </div>
   );
