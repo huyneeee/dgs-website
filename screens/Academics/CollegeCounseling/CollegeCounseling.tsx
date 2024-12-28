@@ -1,7 +1,6 @@
 import { academicsAPI } from '@/services/academics';
 import { useLocale } from 'next-intl';
-import React, { use } from 'react';
-import Markdown from 'react-markdown';
+import { use } from 'react';
 
 const CollegeCounseling = () => {
   const locale = useLocale();
@@ -10,7 +9,11 @@ const CollegeCounseling = () => {
   const content = data.data.find(item => item.type === 'college-counseling');
   return (
     <div className="markdown">
-      <Markdown>{content?.sections[0]?.description || ''}</Markdown>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: content?.sections[0]?.description || '',
+        }}
+      ></div>
     </div>
   );
 };

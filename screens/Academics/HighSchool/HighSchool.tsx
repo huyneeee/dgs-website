@@ -1,7 +1,6 @@
 import { academicsAPI } from '@/services/academics';
 import { useLocale } from 'next-intl';
-import React, { use } from 'react';
-import Markdown from 'react-markdown';
+import { use } from 'react';
 
 const HighSchool = () => {
   const locale = useLocale();
