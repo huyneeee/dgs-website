@@ -9,11 +9,12 @@ interface TeamMember {
   name: string;
   createdAt: string;
   locale: string;
-  title: string;
-  desc?: string;
+  role: string;
+  summary?: string;
   order?: number;
-  group: MemberGoup[];
+  department: MemberGoup[];
   avatar: {
     url: string;
   };
+  qualification: string;
 }

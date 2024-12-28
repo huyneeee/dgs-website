@@ -5,6 +5,9 @@ import type { NextRequest } from 'next/server';
 function getTagsRevalidate(model: STRAPI_MODEL) {
   if (model === STRAPI_MODEL.Articles) return REVALIDATE_KEYS.articles;
   if (model === STRAPI_MODEL.Global) return REVALIDATE_KEYS.global;
+  if (model === STRAPI_MODEL.Teammember) return REVALIDATE_KEYS.teammember;
+  if (model === STRAPI_MODEL.AcademicsStory)
+    return REVALIDATE_KEYS['academics-story'];
 }
 
 export async function POST(request: NextRequest) {

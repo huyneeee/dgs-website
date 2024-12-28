@@ -32,26 +32,26 @@ export const CardPerson = ({
     >
       <div
         className={cn(
-          'relative w-full h-[300px]',
+          'relative w-full aspect-square',
           type === 'circle' && 'aspect-square',
           size === 'sm' && 'h-24 w-24',
         )}
       >
         <Image
+          priority
           src={getImageLink(avatarUrl)}
           alt="avatar"
           fill
-          sizes="33%vw"
           className={cn(
-            'object-cover rounded-3xl group-hover:brightness-50',
+            'object-cover rounded-xl group-hover:brightness-50',
             type === 'circle' && 'rounded-full',
           )}
         />
       </div>
-      <h5 className="text-base text-gray-900 mt-3 sm:mt-6 font-bold group-hover:text-jungle min-w-max">
+      <h5 className="text-base mt-3 sm:mt-6 font-bold text-jungle min-w-max text-[22px]">
         {name}
       </h5>
-      <p className="muted min-w-max">{position}</p>
+      <p className="text-[18px] mt-2">{position}</p>
     </div>
   );
 };

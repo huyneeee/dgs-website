@@ -19,14 +19,14 @@ export const TabContent = ({ data, translationKey }: TabContentProps) => {
   const pathname = usePathname();
   const t = useTranslations(`Navigation.${translationKey}`);
 
-  useEffect(() => {
-    const element = document.querySelector(`#${pathname.replaceAll('/', '-')}`);
-    if (!element) return;
-    element.scrollIntoView({
-      behavior: 'smooth',
-      inline: 'center',
-    });
-  }, []);
+  // useEffect(() => {
+  //   const element = document.querySelector(`#${pathname.replaceAll('/', '-')}`);
+  //   if (!element) return;
+  //   element.scrollIntoView({
+  //     behavior: 'smooth',
+  //     inline: 'end',
+  //   });
+  // }, []);
 
   return (
     <section

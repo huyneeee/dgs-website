@@ -1,22 +1,22 @@
-import { paths } from '@/app/router';
+import { TabContent } from '@/components/layout/TabContent';
+import { tabs } from '@/configs/tabs';
 import { Link } from '@/i18n/routing';
-import { articleAPI } from '@/services/articles';
-import { useLocale } from 'next-intl';
+import NewsItem from '../News/NewsItem';
 import { use } from 'react';
-import NewsItem from '@/screens/News/NewsItem';
+import { useLocale } from 'next-intl';
+import { articleAPI } from '@/services/articles';
 
-export const News = () => {
+const AcademicsStories = () => {
   const locale = useLocale();
   const data = use(articleAPI.getArticle(locale));
 
-  console.log('data', data);
-
+  console.log('data', data.data);
   return (
-    <section id="news" className="container xl:py-10 py-6">
+    <section id="news" className="xl:py-10 py-6">
       <div className="flex items-center justify-between">
-        <h3 className="heading-3">The Latest News & Stories</h3>
+        <h3 className="heading-3">The Latest Academic Stories</h3>
         <Link
-          href={paths.resources['news-and-events']}
+          href="/"
           className="text-jungle text-xs xl:text-sm uppercase hover:underline underline-offset-2"
         >
           view all
@@ -30,3 +30,5 @@ export const News = () => {
     </section>
   );
 };
+
+export default AcademicsStories;

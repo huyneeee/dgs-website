@@ -40,6 +40,7 @@ const Navigation = ({
           className="md:w-[219px] md:h-[90px] w-[101px] h-[42px]"
         />
       </Link>
+
       <div className="items-center gap-2 hidden xl:flex">
         <nav className="flex items-center justify-between flex-auto gap-4">
           {DATA.map((nav, key) => {
@@ -48,23 +49,27 @@ const Navigation = ({
                 <Link
                   key={key}
                   href={(nav[1] as any).root}
-                  className="hover:text-jungle px-0 underline-offset-4 hover:underline"
+                  className="hover:text-jungle px-0 underline-offset-4 hover:decoration-jungle hover:underline"
                 >
                   {t(`${nav[0]}.root` as any)}
                 </Link>
               );
             }
 
+            console.log('nav', nav);
+
             return (
               <HoverCard key={key} openDelay={300}>
                 <HoverCardTrigger asChild>
-                  <Button
-                    variant={'link'}
-                    className="hover:text-jungle px-0 data-[state=open]:text-jungle text-current"
-                  >
-                    {t(`${nav[0]}.root` as any)}
-                    <ChevronDown size={14} className="hover:rotate-180" />
-                  </Button>
+                  <div className="flex items-center gap-2">
+                    <Link
+                      href={(nav[1] as any).root}
+                      className="hover:text-jungle px-0 data-[state=open]:text-jungle text-current flex items-center gap-1"
+                    >
+                      {t(`${nav[0]}.root` as any)}
+                      <ChevronDown size={14} className="hover:rotate-180" />
+                    </Link>
+                  </div>
                 </HoverCardTrigger>
                 <HoverCardContent className="min-w-max flex flex-col gap-3">
                   {Object.entries(nav[1])

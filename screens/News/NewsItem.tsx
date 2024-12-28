@@ -11,29 +11,31 @@ const NewsItem = ({ title, cover, publishedAt, slug }: Article) => {
 
   return (
     <FadeInBox className="flex flex-col flex-1 xl:gap-3 gap-2 group cursor-pointer w-full">
-      <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden">
-        <Image
-          src={cover?.url || ''}
-          alt="img-new"
-          fill
-          className="group-hover:scale-110 transition-transform duration-500 ease-linear"
-          sizes="33vw"
-          loader={strapiLoaderImg}
-        />
-      </div>
       <Link
+        className="flex flex-col gap-2"
         href={`${paths.resources['news-and-events']}/${slug}`}
-        className="sm:text-lg text-base line-clamp-2 group-hover:text-jungle group-hover:underline underline-offset-2"
       >
-        {title}
+        <div className="relative w-full aspect-[3/2] rounded-md overflow-hidden">
+          <Image
+            src={cover?.url || ''}
+            alt="img-new"
+            fill
+            className="group-hover:scale-110 transition-transform duration-500 ease-linear"
+            sizes="33vw"
+            loader={strapiLoaderImg}
+          />
+        </div>
+        <p className="sm:text-lg text-base line-clamp-2 hover:text-jungle hover:underline underline-offset-2 font-[600]">
+          {title}
+        </p>
+        <p className="muted font-[500]">
+          {format.dateTime(dateTime, {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}
+        </p>
       </Link>
-      <p className="muted">
-        {format.dateTime(dateTime, {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        })}
-      </p>
     </FadeInBox>
   );
 };

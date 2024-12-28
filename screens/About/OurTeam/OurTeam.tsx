@@ -9,29 +9,33 @@ const OurTeam = ({ teamMembers }: { teamMembers: TeamMember[] }) => {
   const t = useTranslations('AboutPage');
   const [selectedMember, setSelectedMember] = useState<TeamMember>();
   const advisoryBoard = teamMembers.filter(m =>
-    m.group.includes('advisory-board'),
+    m.department.includes('advisory-board'),
   );
   const seniorLeadershipTeam = teamMembers.filter(m =>
-    m.group.includes('senior-leadership-team'),
+    m.department.includes('senior-leadership-team'),
   );
-  const highSchool = teamMembers.filter(m => m.group.includes('high-school'));
+  const highSchool = teamMembers.filter(m =>
+    m.department.includes('high-school'),
+  );
 
   const onClose = () => setSelectedMember(undefined);
   const selectMember = (member: TeamMember) => {
     setSelectedMember(member);
   };
 
+  console.log('teamMembers', teamMembers);
+
   return (
     <section id="our-team" className="mt-8">
       {/* advisoryBoard */}
       <h3 className="heading-3 mb-4 lg:mb-6">{t('advisoryBoard')}</h3>
-      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
         {advisoryBoard.map(member => (
           <CardPerson
             key={member.id}
             name={member.name}
-            position={member.title}
-            avatarUrl={member.avatar.url}
+            position={member.role}
+            avatarUrl={member.avatar?.url}
             onClick={() => selectMember(member)}
           />
         ))}
@@ -50,7 +54,7 @@ const OurTeam = ({ teamMembers }: { teamMembers: TeamMember[] }) => {
               <CardPerson
                 key={member.id}
                 name={member.name}
-                position={member.title}
+                position={member.role}
                 avatarUrl={member.avatar.url}
                 onClick={() => selectMember(member)}
               />
@@ -69,7 +73,7 @@ const OurTeam = ({ teamMembers }: { teamMembers: TeamMember[] }) => {
               <CardPerson
                 key={member.id}
                 name={member.name}
-                position={member.title}
+                position={member.role}
                 avatarUrl={member.avatar.url}
                 onClick={() => selectMember(member)}
               />

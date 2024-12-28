@@ -9,18 +9,22 @@ const Socials = [
   {
     icon: '/icons/socials/facebook.png',
     link: 'https://www.facebook.com/dgshanoi',
+    text: 'Facebook',
   },
   {
     icon: '/icons/socials/instagram.png',
     link: 'https://www.instagram.com/dgs_hanoi',
+    text: 'Instagram',
   },
   {
     icon: '/icons/socials/x.png',
     link: 'https://www.facebook.com/dgshanoi',
+    text: 'Twitter',
   },
   {
     icon: '/icons/socials/youtube.png',
     link: 'https://www.youtube.com/@DeltaGlobalSchoolDGS',
+    text: 'Youtube',
   },
 ];
 
@@ -78,7 +82,7 @@ export const Footer = () => {
 
         <div className="flex sm:gap-24 max-sm:flex-wrap max-sm:gap-y-6">
           <div className="flex flex-col text-white gap-3 max-sm:w-1/2">
-            <p className="text-base font-bold">Resources</p>
+            <p className="text-base font-bold">{t('Footer.Resources')}</p>
             {Navs.map((item, key) => (
               <Link
                 href={item.link}
@@ -91,8 +95,8 @@ export const Footer = () => {
           </div>
 
           <div className="flex flex-col text-white gap-3 max-sm:w-1/2">
-            <p className="text-base font-bold">Resources</p>
-            {Navs.map((item, key) => (
+            <p className="text-base font-bold">{t('Footer.SocialMedia')}</p>
+            {Socials.map((item, key) => (
               <Link
                 href={item.link}
                 key={key}
@@ -104,7 +108,7 @@ export const Footer = () => {
           </div>
 
           <div className="flex flex-col text-white gap-3 max-sm:w-full">
-            <p className="text-base font-bold">Head Office</p>
+            <p className="text-base font-bold">{t('Footer.HeadOffice')}</p>
             <a
               href="phone:0989123456"
               className="flex items-center gap-1 text-base font-light hover:underline underline-offset-2"
@@ -120,17 +124,18 @@ export const Footer = () => {
               office@dgs.org.vn
             </a>
             <a
-              href="https://www.google.com/maps/dir//LC,+L%C3%B4+H3,+khu+%C4%91%C3%B4+th%E1%BB%8B+Starlake,+B%E1%BA%AFc+T%E1%BB%AB+Li%C3%AAm,+H%C3%A0+N%E1%BB%99i+11900/@21.055627,105.7102985,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3135abe983b20481:0x1a9d3d4234f79268!2m2!1d105.7927002!2d21.0556469?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/The+Dewey+Schools+T%C3%A2y+H%E1%BB%93+T%C3%A2y/@21.0550167,105.7877679,16.31z/data=!4m6!3m5!1s0x3135abe983b20481:0x1a9d3d4234f79268!8m2!3d21.0556469!4d105.7927002!16s%2Fg%2F11qr5ln4rg?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               className="flex items-start gap-1 sm:max-w-[300px] text-base font-light hover:underline underline-offset-2"
             >
               <MapPinned className="shrink-0" />
-              The Dewey Schools Tay Ho Tay Lot H3-LC, Starlake Tay Ho Tay
-              residential area Bac Tu Liem District, Hanoi
+              The Dewey Schools Tay Ho Tay LC, Lot H3, Starlake residential
+              area, Bac Tu Liem District, Hanoi
             </a>
           </div>
         </div>
       </div>
+
       <div className="container flex items-center justify-center border-t border-white/40 sm:py-10 py-5">
         <p className="text-background text-sm">
           © 2024 DGS Country School |{' '}

@@ -31,8 +31,9 @@
       "admission-process": "Quá trình tuyển sinh",
       "contact-admission": "Liên hệ tư vấn tuyển sinh"
     },
-    "student-well-being": {
+    "student-life": {
       "root": "Đời sống học đường",
+      "student-well-being": "Sức khỏe của học sinh",
       "cpoms": "CPOMS",
       "leadership-opportunities": "Cơ hộ phát triển kỹ đạo lãnh đạo"
     },
@@ -121,5 +122,10 @@
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
     "title": "Something went wrong!"
+  },
+  "Footer": {
+    "Resources": "Tài nguyên",
+    "HeadOffice": "Trụ sở chính",
+    "SocialMedia": "Mạng xã hội"
   }
 }

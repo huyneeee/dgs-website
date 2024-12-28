@@ -104,4 +104,24 @@ html {
   .muted {
     @apply text-sm text-muted-foreground;
   }
+
+  .markdown {
+    padding: 32px 0;
+  }
+
+  .markdown h1 {
+    @apply text-4xl font-extrabold leading-relaxed lg:text-5xl;
+  }
+
+  .markdown h2 {
+    @apply text-3xl font-semibold leading-relaxed;
+  }
+
+  .markdown h3 {
+    @apply text-2xl font-semibold leading-relaxed;
+  }
+
+  .markdown h4 {
+    @apply text-xl font-semibold leading-relaxed;
+  }
 }

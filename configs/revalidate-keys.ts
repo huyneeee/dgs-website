@@ -3,10 +3,12 @@ export const REVALIDATE_KEYS = {
   articles: 'articles',
   global: 'global',
   teammember: 'teammember',
+  'academics-story': 'academics-story',
 };
 
 export enum STRAPI_MODEL {
   Articles = 'article',
   Global = 'global',
   Teammember = 'teammember',
+  AcademicsStory = 'academics-story',
 }

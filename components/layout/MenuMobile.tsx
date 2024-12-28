@@ -136,7 +136,6 @@ const MenuMobile = () => {
             );
           })}
         </div>
-        <SwitchLanguage />
       </SheetContent>
     </Sheet>
   );
