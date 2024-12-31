@@ -22,3 +22,8 @@ type Article = {
   sections: Section[];
   seos: SEO | null;
 };
+
+type ArticleSearching = {
+  locale: Locale;
+  localizations: Article[];
+} & Article;

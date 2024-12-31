@@ -13,3 +13,8 @@ type Job = {
   shortJobDescription: string;
   department: string;
 };
+
+type JobSearching = {
+  localizations: Job[];
+  locale: Locale;
+} & Job;
