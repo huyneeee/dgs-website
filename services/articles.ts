@@ -1,4 +1,5 @@
 import { REVALIDATE_KEYS } from '@/configs/revalidate-keys';
+import { desc, section } from 'motion/react-m';
 import qs from 'qs';
 
 const getArticle = async (locale: string, limit = 3) => {
@@ -9,7 +10,11 @@ const getArticle = async (locale: string, limit = 3) => {
         start: 0,
         limit,
       },
-      populate: ['cover'],
+      populate: {
+        cover: {
+          fields: ['url'],
+        },
+      },
     },
     {
       encodeValuesOnly: true,
@@ -33,10 +38,32 @@ const getDetailArticle = async (locale: string, slug: string) => {
   const query = qs.stringify(
     {
       locale,
-      populate: '*',
       filters: {
         slug: {
           $eq: slug,
+        },
+      },
+      populate: {
+        mainHero: {
+          populate: {
+            image: {
+              fields: 'url',
+            },
+          },
+        },
+        author: {
+          fields: ['name'],
+        },
+        sections: {
+          populate: {
+            media: {
+              populate: {
+                file: {
+                  fields: 'url',
+                },
+              },
+            },
+          },
         },
       },
     },
@@ -45,6 +72,7 @@ const getDetailArticle = async (locale: string, slug: string) => {
       skipNulls: true,
     },
   );
+
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/articles?${query}`,
     {

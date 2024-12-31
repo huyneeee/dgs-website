@@ -6,4 +6,8 @@ interface Academics {
   slug: string;
   type: 'middle-school' | 'high-school' | 'college-counseling';
   sections: Section[];
+  mainHero: {
+    image: { url: string };
+    description: string;
+  };
 }

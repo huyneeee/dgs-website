@@ -23,7 +23,7 @@ const Navigation = ({
   return (
     <header
       className={cn(
-        'sticky top-0 left-0 right-0 z-50 flex container py-3 lg:py-5 justify-between items-center bg-white',
+        'z-50 flex container py-3 lg:py-5 justify-between items-center bg-white',
         type === 'transparent' &&
           'absolute w-full top-0 left-0 z-20 text-white',
         type === 'normal' && 'text-black',

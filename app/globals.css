@@ -82,19 +82,19 @@ html {
   }
 
   .heading-1 {
-    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+    @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
 
   .heading-2 {
-    @apply scroll-m-20 text-3xl font-semibold tracking-tight;
+    @apply text-3xl font-semibold tracking-tight;
   }
 
   .heading-3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+    @apply text-2xl font-semibold tracking-tight;
   }
 
   .heading-4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+    @apply text-xl font-semibold tracking-tight;
   }
 
   .blockquote {
@@ -105,23 +105,37 @@ html {
     @apply text-sm text-muted-foreground;
   }
 
-  .markdown {
-    padding: 32px 0;
+  .image-description {
+    @apply p-2 md:p-4 text-[11px] md:text-[14px] bg-slate-200;
   }
 
-  .markdown h1 {
+  .strapi-content {
+    /* padding: 32px 0; */
+    /* font-family: var(--font-montserrat) !important; */
+  }
+
+  .strapi-content h1 {
     @apply text-4xl font-extrabold leading-relaxed lg:text-5xl;
   }
 
-  .markdown h2 {
+  .strapi-content h2 {
     @apply text-3xl font-semibold leading-relaxed;
   }
 
-  .markdown h3 {
+  .strapi-content h3 {
     @apply text-2xl font-semibold leading-relaxed;
   }
 
-  .markdown h4 {
+  .strapi-content h4 {
     @apply text-xl font-semibold leading-relaxed;
+  }
+
+  .strapi-content ul {
+    list-style-type: disc;
+    margin-left: 18px;
+  }
+
+  .strapi-content * {
+    font-family: 'Montserrat', sans-serif !important;
   }
 }

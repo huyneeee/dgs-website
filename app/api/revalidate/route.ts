@@ -6,6 +6,8 @@ function getTagsRevalidate(model: STRAPI_MODEL) {
   if (model === STRAPI_MODEL.Articles) return REVALIDATE_KEYS.articles;
   if (model === STRAPI_MODEL.Global) return REVALIDATE_KEYS.global;
   if (model === STRAPI_MODEL.Teammember) return REVALIDATE_KEYS.teammember;
+  if (model === STRAPI_MODEL.ClubAndActivity)
+    return REVALIDATE_KEYS['club-and-activity'];
   if (model === STRAPI_MODEL.AcademicsStory)
     return REVALIDATE_KEYS['academics-story'];
   if (model === STRAPI_MODEL.Job) return REVALIDATE_KEYS.jobs;

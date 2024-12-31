@@ -6,7 +6,9 @@ import { teamMemberAPI } from '@/services/teamMembers';
 const OutTeamPage = () => {
   const locale = useLocale();
   const res = use(teamMemberAPI.getTeamMembers(locale));
-  return <OurTeam teamMembers={res.data} />;
+
+  console.log('res', res);
+  return <OurTeam teamMembers={res.data} page="ourTeam" />;
 };
 
 export default OutTeamPage;
