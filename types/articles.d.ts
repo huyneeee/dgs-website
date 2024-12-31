@@ -5,8 +5,9 @@ type Author = {
 };
 
 type Section = {
-  description: string;
-  media: Media | null;
+  textContent: string;
+  media: Media[] | null;
+  title?: string;
 };
 
 type Article = {
@@ -17,8 +18,12 @@ type Article = {
   slug: string;
   publishedAt: string;
   locale: 'vi';
-  cover: Media | null;
+  cover: { url: string } | null;
   author: Author;
   sections: Section[];
   seos: SEO | null;
+  mainHero: {
+    image: { url: string };
+    description: string;
+  };
 };

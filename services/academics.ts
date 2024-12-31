@@ -5,12 +5,26 @@ const getAcademics = async (locale: string) => {
   const query = qs.stringify(
     {
       locale,
-      populate: [
-        'seos',
-        'seos.openGraph',
-        'seos.openGraph.ogImage',
-        'sections',
-      ],
+      populate: {
+        mainHero: {
+          populate: {
+            image: {
+              fields: 'url',
+            },
+          },
+        },
+        sections: {
+          populate: {
+            media: {
+              populate: {
+                file: {
+                  fields: 'url',
+                },
+              },
+            },
+          },
+        },
+      },
     },
     {
       encodeValuesOnly: true,

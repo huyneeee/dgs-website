@@ -27,17 +27,19 @@ type MediaFormat = {
 
 type Media = {
   id: number;
-  documentId: string;
   name: string;
   alternativeText: string;
   caption: string;
   width: number;
   height: number;
-  url: string;
   formats: {
     thumbnail: MediaFormat;
     small: MediaFormat;
     medium: MediaFormat;
+  };
+  desc?: string;
+  file: {
+    url: string;
   };
 };
 
@@ -61,3 +63,12 @@ type SEO = {
   structuredData: null | string;
   openGraph: OpenGraph | null;
 };
+
+interface ClubAndActivity {
+  id: number;
+  name: string;
+  locale: Locale;
+  seos: SEO;
+  sections: string;
+  publishedAt: string;
+}

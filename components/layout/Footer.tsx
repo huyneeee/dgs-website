@@ -71,8 +71,8 @@ export const Footer = () => {
                 <Image
                   src={social.icon}
                   alt="link"
-                  width={32}
-                  height={32}
+                  width={42}
+                  height={42}
                   className="brightness-75 hover:brightness-100 hover:grayscale-0"
                 />
               </Link>
