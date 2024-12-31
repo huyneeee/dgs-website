@@ -68,7 +68,11 @@ interface ClubAndActivity {
   id: number;
   name: string;
   locale: Locale;
-  seos: SEO;
-  sections: string;
   publishedAt: string;
+  sections: Section[];
+  seos: SEO | null;
+  mainHero: {
+    image: { url: string };
+    description: string;
+  };
 }

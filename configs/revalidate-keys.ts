@@ -6,6 +6,8 @@ export const REVALIDATE_KEYS = {
   'academics-story': 'academics-story',
   jobs: 'jobs',
   'club-and-activity': 'club-and-activity',
+  advisory: 'advisory',
+  'experiential-education': 'experiential-education',
 };
 
 export enum STRAPI_MODEL {
@@ -15,4 +17,6 @@ export enum STRAPI_MODEL {
   AcademicsStory = 'academics-story',
   ClubAndActivity = 'club-and-activity',
   Job = 'job',
+  Advisory = 'advisory',
+  ExperientialEducation = 'experiential-education',
 }

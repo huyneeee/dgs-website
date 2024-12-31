@@ -9,7 +9,6 @@ const MiddleSchool = () => {
 
   const content = data.data.find(item => item.type === 'middle-school');
 
-  console.log('content', content);
   return (
     <div className="strapi-content mt-8 !font-montserrat">
       <div>
