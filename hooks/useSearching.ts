@@ -13,7 +13,7 @@ const client = new MeiliSearch({
 /*
   You need to provide indexes of collection from Strapi to search working
 */
-const listIndexes = ['article'];
+const listIndexes = ['article', 'job'];
 
 const useSearching = () => {
   const [input, setInput] = useState('');
@@ -53,7 +53,7 @@ const useSearching = () => {
 
   return [
     {
-      data,
+      data: data as unknown as ResponseSearching,
       input,
       isValidating,
       isOpen,

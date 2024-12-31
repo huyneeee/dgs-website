@@ -27,3 +27,8 @@ type Article = {
     description: string;
   };
 };
+
+type ArticleSearching = {
+  locale: Locale;
+  localizations: Article[];
+} & Article;

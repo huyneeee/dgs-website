@@ -11,6 +11,7 @@ import {
 import useSearching from '@/hooks/useSearching';
 import { usePathname, useRouter } from '@/i18n/routing';
 import { Search, X } from 'lucide-react';
+import FoundItem from './FoundItem';
 
 const Searching = () => {
   const [{ isOpen, input, data, isValidating }, { setInput, setIsOpen }] =
@@ -29,7 +30,7 @@ const Searching = () => {
             account and remove your data from our servers.
           </DialogDescription>
         </DialogHeader>
-        <div className="flex flex-col">
+        <div className="flex flex-col h-screen">
           <div className="bg-bamboo/10 py-3 flex items-center xl:px-0 px-5">
             <div className="w-full xl:max-w-[700px] mx-auto relative">
               <input
@@ -60,10 +61,14 @@ const Searching = () => {
             </Button>
           </div>
           {isValidating ? (
-            <p>Searching...</p>
+            <p className="w-full xl:max-w-[700px] mx-auto max-xl:px-5 mb-3">
+              Searching...
+            </p>
           ) : (
-            <div className="flex-auto overflow-scroll">
-              {JSON.stringify(data, null)}
+            <div className="flex-auto overflow-y-scroll w-full xl:max-w-[700px] mx-auto max-xl:px-5">
+              {data?.results?.map((result, key) => (
+                <FoundItem key={key} {...result} />
+              ))}
             </div>
           )}
         </div>
