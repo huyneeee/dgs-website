@@ -127,5 +127,23 @@
     "Resources": "Tài nguyên",
     "HeadOffice": "Trụ sở chính",
     "SocialMedia": "Mạng xã hội"
+  },
+  "Careers": {
+    "applyThroughOtherWebsites": "Ứng tuyển qua các website khác",
+    "middleSchool": "Khối THCS",
+    "highSchool": "Khối THPT",
+    "allSchoolAdministration": "Khối vận hành toàn trường",
+    "apply": "Ứng tuyển",
+    "placeholder": "Vui lòng nhập {name}",
+    "fullName": "Họ và tên",
+    "email": "Email",
+    "phoneNumber": "Số điện thoại",
+    "resume": "Resume/CV",
+    "dragDropFile": "Drag and drop your file here or browse from your computer",
+    "validateFile": "Up to 5 MB, allowed file types: .doc, .docx, .pdf",
+    "pleaseEnterYourField": "Vui lòng nhập {name}",
+    "exceedsLimit": "The file exceeds the size limit. (15MB)",
+    "requiredFile": "Please upload a file",
+    "allowedFiles": "Allowed file types: .doc, .docx, .pdf"
   }
 }

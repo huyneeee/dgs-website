@@ -8,6 +8,7 @@ function getTagsRevalidate(model: STRAPI_MODEL) {
   if (model === STRAPI_MODEL.Teammember) return REVALIDATE_KEYS.teammember;
   if (model === STRAPI_MODEL.AcademicsStory)
     return REVALIDATE_KEYS['academics-story'];
+  if (model === STRAPI_MODEL.Job) return REVALIDATE_KEYS.jobs;
 }
 
 export async function POST(request: NextRequest) {

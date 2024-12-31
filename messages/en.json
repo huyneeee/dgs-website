@@ -126,5 +126,23 @@
     "Resources": "Resources",
     "HeadOffice": "Head Office",
     "SocialMedia": "Social Media"
+  },
+  "Careers": {
+    "applyThroughOtherWebsites": "Apply through other websites",
+    "middleSchool": "Middle School",
+    "highSchool": "High School",
+    "allSchoolAdministration": "All School Administration",
+    "apply": "Apply",
+    "placeholder": "Enter your {name}",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "resume": "Resume/CV",
+    "dragDropFile": "Drag and drop your file here or browse from your computer",
+    "validateFile": "Up to 5 MB, allowed file types: .doc, .docx, .pdf",
+    "pleaseEnterYourField": "Please enter a valid {name}",
+    "exceedsLimit": "The file exceeds the size limit. (15MB)",
+    "requiredFile": "Please upload a file",
+    "allowedFiles": "Allowed file types: .doc, .docx, .pdf"
   }
 }

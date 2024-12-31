@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { paths } from '@/app/router';
-import { Button } from '@/components/ui/button';
 import {
   HoverCard,
   HoverCardContent,
@@ -55,8 +54,6 @@ const Navigation = ({
                 </Link>
               );
             }
-
-            console.log('nav', nav);
 
             return (
               <HoverCard key={key} openDelay={300}>

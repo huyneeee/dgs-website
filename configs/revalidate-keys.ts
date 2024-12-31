@@ -4,6 +4,7 @@ export const REVALIDATE_KEYS = {
   global: 'global',
   teammember: 'teammember',
   'academics-story': 'academics-story',
+  jobs: 'jobs',
 };
 
 export enum STRAPI_MODEL {
@@ -11,4 +12,5 @@ export enum STRAPI_MODEL {
   Global = 'global',
   Teammember = 'teammember',
   AcademicsStory = 'academics-story',
+  Job = 'job',
 }
