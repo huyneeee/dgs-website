@@ -41,6 +41,7 @@ type Media = {
   file: {
     url: string;
   };
+  url: string;
 };
 
 type OpenGraph = {

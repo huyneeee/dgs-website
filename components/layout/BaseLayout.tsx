@@ -7,6 +7,8 @@ import { getMessages } from 'next-intl/server';
 import { Montserrat } from 'next/font/google';
 import { ReactNode } from 'react';
 import { Footer } from './Footer';
+import DialogBanner from './DialogBanner';
+import { bannerAPI } from '@/services/banners';
 
 const franklin = Montserrat({
   subsets: ['latin', 'vietnamese'],
@@ -23,6 +25,7 @@ export default async function BaseLayout({ children, locale }: Props) {
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const banners = await bannerAPI.getBanners();
 
   return (
     <html className="h-full scroll-smooth" lang={locale}>
@@ -33,6 +36,7 @@ export default async function BaseLayout({ children, locale }: Props) {
             {children}
             <Searching />
             <Footer />
+            <DialogBanner banners={banners.data} />
           </LazyMotion>
         </NextIntlClientProvider>
       </body>
