@@ -1,4 +1,3 @@
-import { paths } from '@/app/router';
 import { Link } from '@/i18n/routing';
 import { Mail, MapPinned, Smartphone } from 'lucide-react';
 import { useTranslations } from 'next-intl';

@@ -21,7 +21,6 @@ import { ChevronRight, Menu, Search, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import SwitchLanguage from './SwitchLanguage';
 
 const DATA = Object.entries(paths).slice(1); // skip Home
 

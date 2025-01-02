@@ -4,7 +4,7 @@ import { MainNav } from '@/configs/tabs';
 import { Link, usePathname } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 type TabContentProps = {
   data: {

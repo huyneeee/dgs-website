@@ -1,6 +1,5 @@
 import { TabContent } from '@/components/layout/TabContent';
 import { tabs } from '@/configs/tabs';
-import AcademicsPage from '@/screens/Academics/AcademicsPage';
 import AcademicsStatement from '@/screens/Academics/AcademicsStatement';
 import AcademicsStories from '@/screens/Academics/AcademicsStories.tsx';
 import { useTranslations } from 'next-intl';

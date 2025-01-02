@@ -7,10 +7,11 @@ import {
 } from '@/components/ui/hover-card';
 import { Link } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
-import { ChevronDown, Search } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import MenuMobile from './MenuMobile';
+import SearchIcon from './SearchIcon';
 
 const DATA = Object.entries(paths).slice(1); // skip Home
 
@@ -86,16 +87,7 @@ const Navigation = ({
           })}
         </nav>
 
-        <Link
-          href={{
-            pathname: '/',
-            query: {
-              q: '',
-            },
-          }}
-        >
-          <Search />
-        </Link>
+        <SearchIcon />
       </div>
 
       <MenuMobile />
