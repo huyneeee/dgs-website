@@ -8,14 +8,11 @@ export const REVALIDATE_KEYS = {
   'club-and-activity': 'club-and-activity',
   advisory: 'advisory',
   'experiential-education': 'experiential-education',
-<<<<<<< Updated upstream
   banners: 'banners',
-=======
   admission: 'admission',
   'student-well-being': 'student-well-being',
   'cpoms-page': 'cpoms-page',
   'leadership-opportunities': 'leadership-opportunities',
->>>>>>> Stashed changes
 };
 
 export enum STRAPI_MODEL {
@@ -27,12 +24,9 @@ export enum STRAPI_MODEL {
   Job = 'job',
   Advisory = 'advisory',
   ExperientialEducation = 'experiential-education',
-<<<<<<< Updated upstream
   Banner = 'banner',
-=======
   Admission = 'admission',
   StudentWellBeing = 'student-well-being',
   CpomsPage = 'cpoms-page',
   LeadershipOpportunities = 'leadership-opportunities',
->>>>>>> Stashed changes
 }

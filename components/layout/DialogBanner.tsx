@@ -59,7 +59,7 @@ const DialogBanner = ({ banners }: { banners: Banner[] }) => {
           ]}
         >
           <CarouselContent className="">
-            {banners.map(banner => (
+            {banners?.map(banner => (
               <CarouselItem
                 key={banner.documentId}
                 className="relative w-full h-[500px]"
