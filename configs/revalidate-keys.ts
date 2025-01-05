@@ -13,6 +13,8 @@ export const REVALIDATE_KEYS = {
   'student-well-being': 'student-well-being',
   'cpoms-page': 'cpoms-page',
   'leadership-opportunities': 'leadership-opportunities',
+  library: 'library',
+  policy: 'policy',
 };
 
 export enum STRAPI_MODEL {
@@ -29,4 +31,6 @@ export enum STRAPI_MODEL {
   StudentWellBeing = 'student-well-being',
   CpomsPage = 'cpoms-page',
   LeadershipOpportunities = 'leadership-opportunities',
+  Library = 'library',
+  Policy = 'policy',
 }

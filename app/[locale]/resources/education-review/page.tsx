@@ -1,1 +1,1 @@
-export { default } from '@/screens/Resources/DgsLibrary';
+export { default } from '@/screens/Resources/EducationReview';

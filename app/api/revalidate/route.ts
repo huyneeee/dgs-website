@@ -16,6 +16,8 @@ function getTagsRevalidate(model: STRAPI_MODEL) {
   if (model === STRAPI_MODEL.ExperientialEducation)
     return REVALIDATE_KEYS['experiential-education'];
   if (model === STRAPI_MODEL.Banner) return REVALIDATE_KEYS.banners;
+  if (model === STRAPI_MODEL.Library) return REVALIDATE_KEYS.library;
+  if (model === STRAPI_MODEL.Policy) return REVALIDATE_KEYS.policy;
 }
 
 export async function POST(request: NextRequest) {

@@ -113,6 +113,15 @@
     "policy-6": "Security vi",
     "policy-6-content": "This website takes every precaution to protect our users’ personal information. Whenever users submit personal information (such as contact info or credit card info) via online forms, registration, or online purchase, upon submission that information is encrypted via the highest level of SSL (Secured Sockets Layer) available. Servers that store personally identifiable information are in a secure environment. Under no circumstances are credit card numbers permanently stored on our website servers."
   },
+  "Library": {
+    "title": "Thư viện DGS"
+  },
+  "Handbook": {
+    "title": "Sổ tay"
+  },
+  "EducationReview": {
+    "title": "Tổng quan giáo dục"
+  },
   "NotFoundPage": {
     "title": "Page not found vi",
     "description": "Desc page not found vi"

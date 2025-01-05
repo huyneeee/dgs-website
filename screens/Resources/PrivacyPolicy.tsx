@@ -1,18 +1,18 @@
+import { policy } from '@/services/policy';
 import { useLocale, useTranslations } from 'next-intl';
-import React, { use } from 'react';
+import { use } from 'react';
 import { handleMedia } from '../News/NewsDetailPage';
-import { library } from '@/services/library';
 
-const DgsLibrary = () => {
+const PrivacyPolicy = () => {
   const t = useTranslations();
   const locale = useLocale();
-  const admissionData = use(library.getLibrary(locale));
+  const policyData = use(policy.getPolicy(locale));
 
-  const content = admissionData.data;
+  const content = policyData.data;
 
   return (
     <main className="bg-[#fafafa] flex flex-col w-full container xl:pb-20 pb-10 divide-y-[1px] divide-black">
-      <h3 className="heading-2 my-3 lg:my-5 ">{t('Library.title')}</h3>
+      <h3 className="heading-2 my-3 lg:my-5 ">{t('PrivacyPolicy.title')}</h3>
 
       <section className="mt-6 ">
         <div>
@@ -69,4 +69,4 @@ const DgsLibrary = () => {
   );
 };
 
-export default DgsLibrary;
+export default PrivacyPolicy;
