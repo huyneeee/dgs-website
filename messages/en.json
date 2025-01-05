@@ -26,11 +26,8 @@
       "experiential-education": "Experiential Education",
       "dgs-sport-program": "DGS Sport Program"
     },
-    "admissions": {
-      "root": "Admissions",
-      "admissions-regulations": "Admission Regulations",
-      "admission-process": "Admission Process",
-      "contact-admission": "Contact Admission"
+    "admission": {
+      "root": "Admission"
     },
     "student-life": {
       "root": "Student Life",
@@ -87,6 +84,9 @@
   },
   "SchoolCalendar": {
     "title": "School Calender"
+  },
+  "Admission": {
+    "title": "Admission"
   },
   "MetaData": {
     "title": "DGS School",

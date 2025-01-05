@@ -23,6 +23,7 @@ const NewsItem = ({ title, cover, publishedAt, slug }: Article) => {
             className="group-hover:scale-110 transition-transform duration-500 ease-linear"
             sizes="33vw"
             loader={strapiLoaderImg}
+            objectFit="cover"
           />
         </div>
         <p className="sm:text-lg text-base line-clamp-2 hover:text-jungle hover:underline underline-offset-2 font-[600]">

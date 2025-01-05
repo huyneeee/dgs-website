@@ -24,9 +24,8 @@ const Navigation = ({
   return (
     <header
       className={cn(
-        'z-50 flex container py-3 lg:py-5 justify-between items-center bg-white',
-        type === 'transparent' &&
-          'absolute w-full top-0 left-0 z-20 text-white',
+        'z-50 flex container py-2 justify-between items-center bg-white sticky top-0 shadow-sm',
+        type === 'transparent' && 'text-white',
         type === 'normal' && 'text-black',
       )}
     >
@@ -49,7 +48,7 @@ const Navigation = ({
                 <Link
                   key={key}
                   href={(nav[1] as any).root}
-                  className="hover:text-jungle px-0 underline-offset-4 hover:decoration-jungle hover:underline"
+                  className="hover:text-jungle px-0 underline-offset-4 hover:decoration-jungle hover:underline font-[600]"
                 >
                   {t(`${nav[0]}.root` as any)}
                 </Link>
@@ -62,7 +61,7 @@ const Navigation = ({
                   <div className="flex items-center gap-2">
                     <Link
                       href={(nav[1] as any).root}
-                      className="hover:text-jungle px-0 data-[state=open]:text-jungle text-current flex items-center gap-1"
+                      className="hover:text-jungle px-0 data-[state=open]:text-jungle text-current flex items-center gap-1 font-[600]"
                     >
                       {t(`${nav[0]}.root` as any)}
                       <ChevronDown size={14} className="hover:rotate-180" />
@@ -74,7 +73,7 @@ const Navigation = ({
                     .slice(1)
                     .map((navChild, keyChild) => (
                       <Link
-                        className="hover:text-jungle hover:font-semibold hover:underline pb-1"
+                        className="hover:text-jungle hover:font-semibold hover:underline pb-1 font-[600]"
                         key={`${key}-${keyChild}`}
                         href={navChild[1]}
                       >

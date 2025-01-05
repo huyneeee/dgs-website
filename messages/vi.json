@@ -25,11 +25,8 @@
       "club-and-activities": "Câu lạc bộ và hoạt động ngoại khoá",
       "experiential-education": "Giáo dục trải nghiệm"
     },
-    "admissions": {
-      "root": "Tuyển sinh",
-      "admissions-regulations": "Quy định tuyển sinh",
-      "admission-process": "Quá trình tuyển sinh",
-      "contact-admission": "Liên hệ tư vấn tuyển sinh"
+    "admission": {
+      "root": "Tuyển sinh"
     },
     "student-life": {
       "root": "Đời sống học đường",
@@ -87,6 +84,9 @@
   },
   "SchoolCalendar": {
     "title": "Lịch năm học DGS"
+  },
+  "Admission": {
+    "title": "Tuyển sinh"
   },
   "MetaData": {
     "title": "DGS School",

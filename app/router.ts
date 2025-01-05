@@ -22,11 +22,8 @@ export const paths = {
     'experiential-education': '/co-curriculars/experiential-education',
     // "dgs-sport-program": "/co-curriculars/dgs-sport-program",
   },
-  admissions: {
-    root: '/admissions/admission-regulations',
-    'admissions-regulations': '/admissions/admission-regulations',
-    'admission-process': '/admissions/admission-process',
-    'contact-admission': '/admissions/contact-admission',
+  admission: {
+    root: '/admission',
   },
   'student-life': {
     root: '/student-life/student-well-being',
@@ -40,7 +37,7 @@ export const paths = {
   resources: {
     root: '/resources/news-and-events',
     'news-and-events': '/resources/news-and-events',
-    'dgs-library': '/resources/dgc-library',
+    'dgs-library': '/resources/dgs-library',
     policies: '/resources/policies',
     'school-calendar': '/resources/school-calendar',
     handbook: '/resources/handbook',

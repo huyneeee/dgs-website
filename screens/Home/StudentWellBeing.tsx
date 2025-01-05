@@ -26,11 +26,8 @@ export const StudentWellBeing = () => {
           duration: 0.5,
         }}
       >
-        <div className="flex items-center gap-4 md:gap-10 lg:flex-row-reverse flex-col-reverse">
-          <h3 className="xl:text-4xl sm:text-2xl text-lg max-lg:text-center">
-            {t('HomePage.studentWellBeing-1')}
-          </h3>
-          <div className="aspect-[50/35] w-full relative">
+        <div className="flex md:flex-row flex-col items-center gap-4 md:gap-10 ">
+          <div className="aspect-[50/35] w-full  relative">
             <Image
               src="/images/student-well-being/kid-1.jpg"
               alt="kid-1"
@@ -38,10 +35,24 @@ export const StudentWellBeing = () => {
               className="rounded-2xl"
             />
           </div>
+          <div className="flex flex-col gap-6">
+            <h3 className="xl:text-4xl sm:text-2xl text-lg max-lg:text-center">
+              {t('HomePage.studentWellBeing-1')}
+            </h3>
+            <div className="text-center md:text-left">
+              <Button
+                size="lg"
+                className="rounded-lg bg-jungle hover:bg-jungle hover:brightness-90 w-[180px]"
+              >
+                <Link href="/">{t('readMore')}</Link>
+                <MoveRight />
+              </Button>
+            </div>
+          </div>
         </div>
       </FadeInBox>
 
-      <div className="flex items-center xl:gap-16 w-full h-[300px] xl:h-[500px] relative">
+      {/* <div className="flex items-center xl:gap-16 w-full h-[300px] xl:h-[500px] relative">
         <Image
           src="/images/student-well-being/kid-2.jpg"
           alt="kid-2"
@@ -63,7 +74,7 @@ export const StudentWellBeing = () => {
             </Button>
           </FadeInBox>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
