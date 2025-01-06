@@ -1,38 +1,10 @@
 import { REVALIDATE_KEYS } from '@/configs/revalidate-keys';
-import qs from 'qs';
+import { getQuery } from './configs';
 
 const getAcademics = async (locale: string) => {
-  const query = qs.stringify(
-    {
-      locale,
-      populate: {
-        mainHero: {
-          populate: {
-            image: {
-              fields: 'url',
-            },
-          },
-        },
-        sections: {
-          populate: {
-            media: {
-              populate: {
-                file: {
-                  fields: 'url',
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    {
-      encodeValuesOnly: true,
-      skipNulls: true,
-    },
-  );
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/academics-stories?${query}`,
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/academics-stories?${getQuery(locale)}`,
+
     {
       next: {
         tags: [REVALIDATE_KEYS['academics-story']],

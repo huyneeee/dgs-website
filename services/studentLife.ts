@@ -1,12 +1,12 @@
 import { REVALIDATE_KEYS } from '@/configs/revalidate-keys';
 import { getQuery } from './configs';
 
-const getActivitiesPage = async (locale: string) => {
+const getCpoms = async (locale: string) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/club-and-activity?${getQuery(locale)}`,
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/cpoms-page?${getQuery(locale)}`,
     {
       next: {
-        tags: [REVALIDATE_KEYS['club-and-activity']],
+        tags: [REVALIDATE_KEYS['cpoms-page']],
       },
     },
   );
@@ -19,12 +19,12 @@ const getActivitiesPage = async (locale: string) => {
   return data as ResponseStrapi<SectionContent>;
 };
 
-const getAdvisoryPage = async (locale: string) => {
+const getStudentWellBeing = async (locale: string) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/advisory?${getQuery(locale)}`,
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/student-well-being?${getQuery(locale)}`,
     {
       next: {
-        tags: [REVALIDATE_KEYS['advisory']],
+        tags: [REVALIDATE_KEYS['admission']],
       },
     },
   );
@@ -37,12 +37,12 @@ const getAdvisoryPage = async (locale: string) => {
   return data as ResponseStrapi<SectionContent>;
 };
 
-const getExpEducationPage = async (locale: string) => {
+const getLeadershipOpportunity = async (locale: string) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/experiential-education?${getQuery(locale)}`,
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/leadership-opportunity?${getQuery(locale)}`,
     {
       next: {
-        tags: [REVALIDATE_KEYS['experiential-education']],
+        tags: [REVALIDATE_KEYS['leadership-opportunities']],
       },
     },
   );
@@ -55,8 +55,8 @@ const getExpEducationPage = async (locale: string) => {
   return data as ResponseStrapi<SectionContent>;
 };
 
-export const coCurruculars = Object.freeze({
-  getActivitiesPage,
-  getAdvisoryPage,
-  getExpEducationPage,
+export const studentLife = Object.freeze({
+  getCpoms,
+  getStudentWellBeing,
+  getLeadershipOpportunity,
 });

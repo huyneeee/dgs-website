@@ -1,1 +1,1 @@
-export { default } from '@/screens/StudentLife/StudentWellBeing/StudentWellBeing';
+export { default } from '@/screens/StudentLife/StudentWellBeing';

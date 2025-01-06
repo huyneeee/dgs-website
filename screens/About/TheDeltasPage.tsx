@@ -1,5 +1,5 @@
 // import { useTranslations } from 'next-intl';
-import { Content } from '../Content';
+import { Content } from './Content';
 
 const TheDeltasPage = () => {
   // const t = useTranslations('AboutPage');

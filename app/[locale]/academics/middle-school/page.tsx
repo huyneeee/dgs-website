@@ -1,1 +1,1 @@
-export { default } from '@/screens/Academics/MiddleSchool/MiddleSchool';
+export { default } from '@/screens/Academics/MiddleSchool';

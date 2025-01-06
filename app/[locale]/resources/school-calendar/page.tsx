@@ -1,1 +1,1 @@
-export { default } from '@/screens/SchoolCalendar/SchoolCalendar';
+export { default } from '@/screens/Resources/SchoolCalendar';

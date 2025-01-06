@@ -1,1 +1,1 @@
-export { default } from '@/screens/Academics/PrimarySchool/PrimarySchool';
+export { default } from '@/screens/Academics/PrimarySchool';

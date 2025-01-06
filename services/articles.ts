@@ -1,5 +1,4 @@
 import { REVALIDATE_KEYS } from '@/configs/revalidate-keys';
-import { desc, section } from 'motion/react-m';
 import qs from 'qs';
 
 const getArticle = async (locale: string, limit = 3) => {

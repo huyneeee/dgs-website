@@ -42,7 +42,7 @@ const OurTeam = ({
           <h3 className="heading-3 mb-4 lg:mb-6">
             {t('AboutPage.advisoryBoard')}
           </h3>
-          <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+          <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
             {advisoryBoard.map(member => (
               <CardPerson
                 key={member.id}
@@ -62,7 +62,7 @@ const OurTeam = ({
               <h3 className="heading-3 mb-4 lg:mb-6">
                 {t('AboutPage.seniorLeadershipTeam')}
               </h3>
-              <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+              <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                 {seniorLeadershipTeam.map(member => (
                   <CardPerson
                     key={member.id}
@@ -104,7 +104,7 @@ const OurTeam = ({
           <h3 className="heading-3 mb-4 lg:mb-6">
             {t('Academics.consulting-team')}
           </h3>
-          <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+          <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
             {collegeCounseling.map(member => (
               <CardPerson
                 key={member.id}

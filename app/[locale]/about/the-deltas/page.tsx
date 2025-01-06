@@ -1,1 +1,1 @@
-export { default } from '@/screens/About/TheDeltas/TheDeltasPage';
+export { default } from '@/screens/About/TheDeltasPage';

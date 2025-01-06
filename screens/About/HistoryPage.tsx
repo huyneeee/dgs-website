@@ -1,5 +1,6 @@
 // import { useTranslations } from 'next-intl';
-import { Content } from '../Content';
+
+import { Content } from './Content';
 
 const History = () => {
   // const t = useTranslations('AboutPage');

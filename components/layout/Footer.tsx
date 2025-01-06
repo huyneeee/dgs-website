@@ -140,7 +140,7 @@ export const Footer = () => {
           © 2024 DGS Country School |{' '}
           <Link
             className="underline opacity-60 hover:opacity-100"
-            href={'/privacy-policy'}
+            href={'/resources/policies'}
           >
             {t('PrivacyPolicy.title')}
           </Link>

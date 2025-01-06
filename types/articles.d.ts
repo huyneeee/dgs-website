@@ -10,23 +10,11 @@ type Section = {
   title?: string;
 };
 
-type Article = {
-  id: number;
-  documentId: string;
-  title: string;
-  description: string;
+interface Article extends SectionContent {
   slug: string;
-  publishedAt: string;
-  locale: 'vi';
   cover: { url: string } | null;
   author: Author;
-  sections: Section[];
-  seos: SEO | null;
-  mainHero: {
-    image: { url: string };
-    description: string;
-  };
-};
+}
 
 type ArticleSearching = {
   locale: Locale;

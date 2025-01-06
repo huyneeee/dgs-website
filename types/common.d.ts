@@ -65,7 +65,7 @@ type SEO = {
   openGraph: OpenGraph | null;
 };
 
-interface ClubAndActivity {
+interface SectionContent {
   id: number;
   name: string;
   locale: Locale;
