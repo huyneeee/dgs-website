@@ -23,6 +23,7 @@ export const getQuery = (locale: string) =>
             },
           },
         },
+        seo: true,
       },
     },
     {

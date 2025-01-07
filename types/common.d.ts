@@ -71,7 +71,7 @@ interface SectionContent {
   locale: Locale;
   publishedAt: string;
   sections: Section[];
-  seos: SEO | null;
+  seo: SEO | null;
   mainHero: {
     image: { url: string };
     description: string;

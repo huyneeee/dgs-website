@@ -1,13 +1,13 @@
 import { REVALIDATE_KEYS } from '@/configs/revalidate-keys';
 import { getQuery } from './configs';
 
-const getAcademics = async (locale: string) => {
+const getMiddleSchoolPage = async (locale: string) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/academics-stories?${getQuery(locale)}`,
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/academics-middle-school?${getQuery(locale)}`,
 
     {
       next: {
-        tags: [REVALIDATE_KEYS['academics-story']],
+        tags: [REVALIDATE_KEYS['academics-middle-school']],
       },
     },
   );
@@ -17,9 +17,49 @@ const getAcademics = async (locale: string) => {
   }
 
   const data = await res.json();
-  return data as ResponseStrapi<Academics[]>;
+  return data as ResponseStrapi<SectionContent>;
+};
+
+const getHighSchoolPage = async (locale: string) => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/academics-high-school?${getQuery(locale)}`,
+
+    {
+      next: {
+        tags: [REVALIDATE_KEYS['academics-high-school']],
+      },
+    },
+  );
+
+  if (!res.ok) {
+    throw new Error(`Response status: ${res.status}`);
+  }
+
+  const data = await res.json();
+  return data as ResponseStrapi<SectionContent>;
+};
+
+const getHighCollegePage = async (locale: string) => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/academics-college-counseling?${getQuery(locale)}`,
+
+    {
+      next: {
+        tags: [REVALIDATE_KEYS['academics-college-counseling']],
+      },
+    },
+  );
+
+  if (!res.ok) {
+    throw new Error(`Response status: ${res.status}`);
+  }
+
+  const data = await res.json();
+  return data as ResponseStrapi<SectionContent>;
 };
 
 export const academicsAPI = Object.freeze({
-  getAcademics,
+  getMiddleSchoolPage,
+  getHighSchoolPage,
+  getHighCollegePage,
 });

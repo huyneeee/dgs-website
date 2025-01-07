@@ -1,12 +1,10 @@
 import OurTeam from '@/screens/About/OurTeam/OurTeam';
-import { academicsAPI } from '@/services/academics';
 import { teamMemberAPI } from '@/services/teamMembers';
 import { useLocale } from 'next-intl';
 import { use } from 'react';
 
 const CollegeCounseling = () => {
   const locale = useLocale();
-  const data = use(academicsAPI.getAcademics(locale));
   const team = use(teamMemberAPI.getTeamMembers(locale));
 
   return (

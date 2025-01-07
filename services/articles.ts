@@ -89,7 +89,7 @@ const getMetaDataArticle = async (locale: string, slug: string) => {
   const query = qs.stringify(
     {
       locale,
-      populate: ['seos', 'seos.openGraph', 'seos.openGraph.ogImage'],
+      populate: ['seo', 'seo.openGraph', 'seo.openGraph.ogImage'],
       filters: {
         slug: {
           $eq: slug,

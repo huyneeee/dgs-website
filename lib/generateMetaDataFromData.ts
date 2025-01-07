@@ -12,17 +12,17 @@ export async function generateMetadataFromData(
   const faviconImage = `${process.env.NEXT_PUBLIC_STRAPI_URL}${favicon?.url}`;
 
   return {
-    title: seos.metaTitle,
+    title: `${seos.metaTitle} | Delta Global School`,
     description: seos.metaDescription,
     metadataBase: new URL(process.env.NEXT_PUBLIC_LANDING_URL || ''),
     openGraph: {
-      title: seos.openGraph?.ogTitle,
+      title: seos.openGraph?.ogTitle || seos.metaTitle || 'Delta Global School',
       description: seos.openGraph?.ogDescription,
       images: seos.openGraph?.ogImage ? ogImage : urlImages,
       type: 'website',
     },
     twitter: {
-      title: seos.openGraph?.ogTitle,
+      title: seos.openGraph?.ogTitle || seos.metaTitle || 'Delta Global School',
       description: seos.openGraph?.ogDescription,
       images: seos.openGraph?.ogImage ? ogImage : urlImages,
     },

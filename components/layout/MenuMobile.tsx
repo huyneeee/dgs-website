@@ -51,7 +51,7 @@ const MenuMobile = () => {
           title="Menu"
           className="xl:hidden flex"
         >
-          <Menu size={24} />
+          <Menu />
         </Button>
       </SheetTrigger>
       <SheetContent side="top" className="w-full h-full flex flex-col">

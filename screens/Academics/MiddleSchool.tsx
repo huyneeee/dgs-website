@@ -5,11 +5,9 @@ import { use } from 'react';
 
 const MiddleSchool = () => {
   const locale = useLocale();
-  const data = use(academicsAPI.getAcademics(locale));
-  const content = data.data.find(item => item.type === 'middle-school');
+  const data = use(academicsAPI.getMiddleSchoolPage(locale));
 
-  if (!content) return null;
-  return <SectionContent content={content} />;
+  return <SectionContent content={data.data} />;
 };
 
 export default MiddleSchool;

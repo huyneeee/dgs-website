@@ -5,12 +5,9 @@ import AcademicsStories from '@/screens/Academics/AcademicsStories.tsx';
 import { useTranslations } from 'next-intl';
 import { PropsWithChildren } from 'react';
 
-//  @apply max-w-[1480px];
-// @apply sm:px-[40px] px-[20px];
-// @apply mx-auto;
-
 export default function AcademicsLayout({ children }: PropsWithChildren) {
   const t = useTranslations();
+
   return (
     <main className="bg-[#fafafa] flex flex-col w-full xl:pb-40 pb-20">
       <div className="container">

@@ -10,7 +10,6 @@ const AcademicsStories = () => {
   const locale = useLocale();
   const data = use(articleAPI.getArticle(locale));
 
-  console.log('data', data.data);
   return (
     <section id="news" className="xl:py-10 py-6">
       <div className="flex items-center justify-between">

@@ -1,7 +1,7 @@
-import React, { use } from 'react';
-import { handleMedia } from '../News/NewsDetailPage';
-import { useLocale, useTranslations } from 'next-intl';
 import { admission } from '@/services/admission';
+import { useLocale, useTranslations } from 'next-intl';
+import { use } from 'react';
+import { handleMedia } from '../News/NewsDetailPage';
 
 const Admission = () => {
   const t = useTranslations();

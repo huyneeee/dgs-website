@@ -24,7 +24,7 @@ const Navigation = ({
   return (
     <header
       className={cn(
-        'z-50 flex container py-2 justify-between items-center bg-white sticky top-0 shadow-sm',
+        'z-50 flex container py-2 md:py-0 justify-between items-center bg-white sticky top-0 shadow-sm',
         type === 'transparent' && 'text-white',
         type === 'normal' && 'text-black',
       )}
