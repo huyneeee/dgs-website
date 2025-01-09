@@ -6,10 +6,10 @@ import { PropsWithChildren } from 'react';
 export default function StudentLifeLayout({ children }: PropsWithChildren) {
   const t = useTranslations();
   return (
-    <main className="bg-[#fafafa] flex flex-col w-full container xl:pb-40 pb-20">
-      <h3 className="heading-2 my-3 lg:my-5">{t('StudentLife.title')}</h3>
+    <section className="container">
+      <h3 className="heading-2">{t('StudentLife.title')}</h3>
       <TabContent data={tabs['student-life']!} translationKey="student-life" />
       {children}
-    </main>
+    </section>
   );
 }

@@ -39,7 +39,7 @@ const getHighSchoolPage = async (locale: string) => {
   return data as ResponseStrapi<SectionContent>;
 };
 
-const getHighCollegePage = async (locale: string) => {
+const getCollegeCounselingPage = async (locale: string) => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/academics-college-counseling?${getQuery(locale)}`,
 
@@ -61,5 +61,5 @@ const getHighCollegePage = async (locale: string) => {
 export const academicsAPI = Object.freeze({
   getMiddleSchoolPage,
   getHighSchoolPage,
-  getHighCollegePage,
+  getCollegeCounselingPage,
 });

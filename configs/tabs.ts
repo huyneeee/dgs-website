@@ -17,10 +17,10 @@ export const tabs: Partial<RouteProps> = {
     { title: 'our-team', link: paths.about['our-team'] },
   ],
   academics: [
+    { title: 'high-school', link: paths.academics['high-school'] },
+    { title: 'middle-school', link: paths.academics['middle-school'] },
     // { title: "kindergarten", link: paths.academics.kindergarten },
     // { title: "primary-school", link: paths.academics["primary-school"] },
-    { title: 'middle-school', link: paths.academics['middle-school'] },
-    { title: 'high-school', link: paths.academics['high-school'] },
     {
       title: 'college-counselling',
       link: paths.academics['college-counselling'],
@@ -28,12 +28,12 @@ export const tabs: Partial<RouteProps> = {
   ],
   'co-curriculars': [
     {
-      title: 'club-and-activities',
-      link: paths['co-curriculars']['club-and-activities'],
-    },
-    {
       title: 'advisory',
       link: paths['co-curriculars']['advisory'],
+    },
+    {
+      title: 'club-and-activities',
+      link: paths['co-curriculars']['club-and-activities'],
     },
     {
       title: 'experiential-education',
@@ -57,5 +57,15 @@ export const tabs: Partial<RouteProps> = {
       title: 'leadership-opportunities',
       link: paths['student-life']['leadership-opportunities'],
     },
+  ],
+
+  resources: [
+    { title: 'news-and-events', link: paths.resources['news-and-events'] },
+    { title: 'dgs-library', link: paths.resources['dgs-library'] },
+    { title: 'policies', link: paths.resources['policies'] },
+    { title: 'school-calendar', link: paths.resources['school-calendar'] },
+    { title: 'handbook', link: paths.resources['handbook'] },
+    { title: 'education-review', link: paths.resources['education-review'] },
+    // { title: 'news-and-events', link: paths.resources['news-and-events'] },
   ],
 };

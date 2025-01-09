@@ -9,16 +9,16 @@ export default function AcademicsLayout({ children }: PropsWithChildren) {
   const t = useTranslations();
 
   return (
-    <main className="bg-[#fafafa] flex flex-col w-full xl:pb-40 pb-20">
-      <div className="container">
-        <h3 className="heading-2 my-3 lg:my-5">{t('Academics.title')}</h3>
+    <>
+      <section className="container">
+        <h3 className="heading-2">{t('Academics.title')}</h3>
         <TabContent data={tabs.academics!} translationKey="academics" />
         {children}
-      </div>
+      </section>
       <AcademicsStatement />
-      <div className="container">
+      <section className="container">
         <AcademicsStories />
-      </div>
-    </main>
+      </section>
+    </>
   );
 }

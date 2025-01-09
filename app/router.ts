@@ -8,17 +8,17 @@ export const paths = {
     'our-team': '/about/our-team',
   },
   academics: {
-    root: '/academics/middle-school',
+    root: '/academics/high-school',
+    'high-school': '/academics/high-school',
+    'middle-school': '/academics/middle-school',
     // kindergarten: "/academics/kindergarten", // hidden
     // "primary-school": "/academics/primary-school", // hidden
-    'middle-school': '/academics/middle-school',
-    'high-school': '/academics/high-school',
     'college-counselling': '/academics/college-counselling',
   },
   'co-curriculars': {
-    root: '/co-curriculars/club-and-activities',
-    'club-and-activities': '/co-curriculars/club-and-activities',
+    root: '/co-curriculars/advisory',
     advisory: '/co-curriculars/advisory',
+    'club-and-activities': '/co-curriculars/club-and-activities',
     'experiential-education': '/co-curriculars/experiential-education',
     // "dgs-sport-program": "/co-curriculars/dgs-sport-program",
   },

@@ -20,7 +20,7 @@
       "college-counselling": "Tư vấn đại học"
     },
     "co-curriculars": {
-      "root": "Hoạt động hỗ trợ học tâp",
+      "root": "Hoạt động ngoại khóa",
       "advisory": "Chương trình",
       "club-and-activities": "Câu lạc bộ và hoạt động ngoại khoá",
       "experiential-education": "Giáo dục trải nghiệm"
@@ -35,7 +35,7 @@
       "leadership-opportunities": "Cơ hộ phát triển kỹ đạo lãnh đạo"
     },
     "careers": {
-      "root": "Cơ hội việc làm"
+      "root": "Việc làm"
     },
     "resources": {
       "root": "Tài nguyên",
@@ -67,7 +67,7 @@
     "middle-school": "Trung học cơ sở",
     "high-school": "Trung học phổ thông",
     "college-counseling": "Tư vấn đại học",
-    "consulting-team": "Đội ngũ tư vấn"
+    "college-counselor": "Đội ngũ tư vấn"
   },
   "CoCurriculars": {
     "title": "Hoạt động ngoại khóa",
@@ -87,6 +87,9 @@
   },
   "Admission": {
     "title": "Tuyển sinh"
+  },
+  "Resources": {
+    "title": "Tài nguyên"
   },
   "MetaData": {
     "title": "DGS School",

@@ -22,7 +22,7 @@ export const TabContent = ({ data, translationKey }: TabContentProps) => {
   return (
     <section
       id="tab-content-about"
-      className="flex items-center w-full justify-between max-sm:overflow-x-auto gap-8 lg:w-fit lg:justify-start lg:gap-16 lg:my-3"
+      className="flex items-center w-full justify-between overflow-x-auto scroll-smooth gap-8 lg:w-fit lg:justify-start lg:gap-16 pb-6 scrollbar-thin"
     >
       {data.map((item, key) => (
         <Link
@@ -30,7 +30,7 @@ export const TabContent = ({ data, translationKey }: TabContentProps) => {
           href={item.link}
           key={key}
           className={cn(
-            'text-xs sm:text-base text-jungle uppercase underline-offset-[8px] hover:underline decoration-4 max-lg:min-w-max',
+            'text-xs sm:text-base text-jungle uppercase hover:underline decoration-2  min-w-max line-clamp-1',
             pathname.includes(item.link) && 'underline font-bold',
           )}
         >

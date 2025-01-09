@@ -67,6 +67,8 @@ type SEO = {
 
 interface SectionContent {
   id: number;
+  title?: string;
+  documentId: string;
   name: string;
   locale: Locale;
   publishedAt: string;

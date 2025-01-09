@@ -6,7 +6,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }) {
-  const data = await academicsAPI.getHighCollegePage(params.locale);
+  const data = await academicsAPI.getCollegeCounselingPage(params.locale);
   return generateMetadataFromData(data.data.seo);
 }
 

@@ -86,7 +86,7 @@ html {
   }
 
   .heading-2 {
-    @apply text-3xl font-semibold tracking-tight;
+    @apply text-xl md:text-3xl my-4 md:my-6 font-semibold tracking-tight;
   }
 
   .heading-3 {
@@ -137,5 +137,8 @@ html {
 
   .strapi-content * {
     font-family: 'Montserrat', sans-serif !important;
+  }
+  .scrollbar-thin {
+    scrollbar-width: calc(1px);
   }
 }

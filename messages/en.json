@@ -20,7 +20,7 @@
       "college-counselling": "College Counseling"
     },
     "co-curriculars": {
-      "root": "Co Curriculars",
+      "root": "Co-Curriculars",
       "advisory": "Advisory",
       "club-and-activities": "Club and Activities",
       "experiential-education": "Experiential Education",
@@ -68,12 +68,12 @@
     "middle-school": "Middle School",
     "high-school": "High School",
     "college-counseling": "College Counseling",
-    "consulting-team": "Consulting Team"
+    "college-counselor": "College Counselor"
   },
   "CoCurriculars": {
-    "title": "Co Curriculars",
-    "club-activities": "Club & Activities",
+    "title": "Co-Curriculars",
     "advisory": "Advisory",
+    "club-activities": "Club & Activities",
     "experiential-education": "Experiential Education "
   },
   "StudentLife": {
@@ -87,6 +87,9 @@
   },
   "Admission": {
     "title": "Admission"
+  },
+  "Resources": {
+    "title": "Resources"
   },
   "MetaData": {
     "title": "DGS School",

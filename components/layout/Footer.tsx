@@ -34,7 +34,7 @@ const Navs = [
   },
   {
     link: '/',
-    text: '2024-2025 Calendar',
+    text: 'Calendar',
   },
   {
     link: '/',
@@ -54,7 +54,7 @@ export const Footer = () => {
   const t = useTranslations();
   return (
     <footer className="w-full bg-jungle">
-      <div className="container px-5 py-10 sm:px-10 sm:py-20 flex justify-between max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:gap-10">
+      <div className="container px-5 py-10 sm:px-10 sm:py-20 flex justify-between flex-col md:flex-row gap-6">
         <div className="max-sm:w-full">
           <Image
             src="/images/logos/logo-2.png"
@@ -72,7 +72,7 @@ export const Footer = () => {
                   alt="link"
                   width={42}
                   height={42}
-                  className="brightness-75 hover:brightness-100 hover:grayscale-0"
+                  // className="brightness-75 hover:brightness-100 hover:grayscale-0"
                 />
               </Link>
             ))}
@@ -139,7 +139,7 @@ export const Footer = () => {
         <p className="text-background text-sm">
           © 2024 DGS Country School |{' '}
           <Link
-            className="underline opacity-60 hover:opacity-100"
+            className="underline opacity-80 hover:opacity-100"
             href={'/resources/policies'}
           >
             {t('PrivacyPolicy.title')}
@@ -147,7 +147,7 @@ export const Footer = () => {
         </p>
       </div>
 
-      <SwitchLanguage className="fixed right-8 bottom-0 z-[999999]" />
+      <SwitchLanguage className="fixed right-4 bottom-2 z-[999999]" />
     </footer>
   );
 };

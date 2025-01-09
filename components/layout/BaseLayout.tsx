@@ -27,13 +27,17 @@ export default async function BaseLayout({ children, locale }: Props) {
   const messages = await getMessages();
   const banners = await bannerAPI.getBanners();
 
+  console.log('banners', banners);
+
   return (
     <html className="h-full scroll-smooth" lang={locale}>
       <body className={cn(franklin.className, 'flex h-full flex-col')}>
         <NextIntlClientProvider messages={messages}>
           <LazyMotion features={domAnimation}>
             <Navigation type="normal" />
-            {children}
+            <main className="bg-[#fafafa] flex flex-col w-full pb-10">
+              {children}
+            </main>
             <Searching />
             <Footer />
             <DialogBanner banners={banners.data} />

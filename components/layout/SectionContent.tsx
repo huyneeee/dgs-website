@@ -3,10 +3,10 @@ import React from 'react';
 
 const SectionContent = ({ content }: { content: SectionContent }) => {
   return (
-    <div className="strapi-content mt-8 !font-montserrat">
+    <section className="strapi-content !font-montserrat">
       {content!.mainHero && (
         <div>
-          <div className="relative w-full aspect-[16/9]">
+          <div className="relative w-full aspect-[2/1] rounded-sm overflow-hidden">
             {handleMedia(content!.mainHero.image.url)}
           </div>
 
@@ -55,7 +55,7 @@ const SectionContent = ({ content }: { content: SectionContent }) => {
           })}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
