@@ -49,13 +49,13 @@ export const tabs: Partial<RouteProps> = {
       title: 'student-well-being',
       link: paths['student-life']['student-well-being'],
     },
+    // {
+    //   title: 'cpoms',
+    //   link: paths['student-life']['cpoms'],
+    // },
     {
-      title: 'cpoms',
-      link: paths['student-life']['cpoms'],
-    },
-    {
-      title: 'leadership-opportunities',
-      link: paths['student-life']['leadership-opportunities'],
+      title: 'student-leadership',
+      link: paths['student-life']['student-leadership'],
     },
   ],
 
@@ -66,6 +66,6 @@ export const tabs: Partial<RouteProps> = {
     { title: 'school-calendar', link: paths.resources['school-calendar'] },
     { title: 'handbook', link: paths.resources['handbook'] },
     { title: 'education-review', link: paths.resources['education-review'] },
-    // { title: 'news-and-events', link: paths.resources['news-and-events'] },
+    { title: 'contact', link: paths.resources['contact'] },
   ],
 };

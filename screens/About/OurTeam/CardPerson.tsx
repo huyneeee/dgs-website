@@ -48,7 +48,7 @@ export const CardPerson = ({
           )}
         />
       </div>
-      <h5 className="text-base mt-3 sm:mt-6 font-bold text-jungle min-w-max text-[22px]">
+      <h5 className="mt-3 sm:mt-6 font-[600] text-jungle min-w-max text-[22px]">
         {name}
       </h5>
       <p className="text-[18px] mt-2">{position}</p>

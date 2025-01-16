@@ -1,4 +1,5 @@
 import { Analysis } from './Analysis';
+import CoreValues from './CoreValues';
 import { MainHero } from './MainHero';
 import { News } from './News';
 import { StudentWellBeing } from './StudentWellBeing';
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Testimonials />
       <Analysis />
       <StudentWellBeing />
+      <CoreValues />
     </main>
   );
 };

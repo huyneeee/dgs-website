@@ -28,8 +28,8 @@ export const paths = {
   'student-life': {
     root: '/student-life/student-well-being',
     'student-well-being': '/student-life/student-well-being',
-    cpoms: '/student-life/cpoms',
-    'leadership-opportunities': '/student-life/leadership-opportunities',
+    // cpoms: '/student-life/cpoms',
+    'student-leadership': '/student-life/student-leadership',
   },
   careers: {
     root: '/careers',
@@ -42,6 +42,7 @@ export const paths = {
     'school-calendar': '/resources/school-calendar',
     handbook: '/resources/handbook',
     'education-review': '/resources/education-review',
+    contact: '/resources/contact',
   },
   // Hidden
   // portals: {

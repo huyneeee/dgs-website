@@ -37,9 +37,7 @@ const NewsDetailPage = async ({
   const newsUrl = `${process.env.NEXT_PUBLIC_LANDING_URL}/${locale}/resources/news-and-events/${slug}`;
 
   return (
-    <div className="container pb-[48px] flex flex-col gap-2">
-      <h3 className="heading-3 py-[16px]">Stories</h3>
-
+    <div className="pb-[48px] flex flex-col gap-2">
       <div>
         <div className="relative w-full aspect-[16/9]">
           {handleMedia(news.mainHero.image.url)}
@@ -52,13 +50,13 @@ const NewsDetailPage = async ({
 
       <div className="flex flex-col md:flex-row items-start gap-4 md:gap-8 my-2 md:my-4">
         <div className="flex flex-col flex-1 gap-0 divide-y divide-[#000]">
-          <h2 className="heading-2 pb-4">{news.title}</h2>
+          <h2 className="heading-2">{news.title}</h2>
           <p className="py-4">
             {dayjs(news.publishedAt)
               .locale(locale)
               .format('dddd, MMMM D, YYYY')}
           </p>
-          <p className="py-4">By {news.author.name}</p>
+          <p className="py-4">By {news?.author?.name}</p>
 
           <div className="flex items-center gap-0 py-4">
             <a

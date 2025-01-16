@@ -138,7 +138,16 @@ html {
   .strapi-content * {
     font-family: 'Montserrat', sans-serif !important;
   }
+
+  .strapi-content span {
+    @apply !text-[16px] md:!text-[22px];
+  }
+
   .scrollbar-thin {
     scrollbar-width: calc(1px);
+  }
+
+  .divide-line {
+    @apply w-full h-[1px] bg-jungle my-6 lg:my-10;
   }
 }

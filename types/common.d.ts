@@ -4,9 +4,8 @@ type ResponseStrapi<T> = {
   data: T;
   meta: {
     pagination: {
-      page: number;
-      pageSize: number;
-      pageCount: number;
+      limit: number;
+      start: number;
       total: number;
     };
   };

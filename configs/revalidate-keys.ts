@@ -11,7 +11,7 @@ export const REVALIDATE_KEYS = {
   admission: 'admission',
   'student-well-being': 'student-well-being',
   'cpoms-page': 'cpoms-page',
-  'leadership-opportunities': 'leadership-opportunities',
+  'student-leadership': 'student-leadership',
   library: 'library',
   policy: 'policy',
   'the-deltas-page': 'the-deltas-page',
@@ -21,6 +21,7 @@ export const REVALIDATE_KEYS = {
   'academics-high-school': 'academics-high-school',
   'academics-college-counseling': 'academics-college-counseling',
   'about-our-team': 'about-our-team',
+  contact: 'contact',
 };
 
 export enum STRAPI_MODEL {
@@ -35,7 +36,7 @@ export enum STRAPI_MODEL {
   Admission = 'admission',
   StudentWellBeing = 'student-well-being',
   CpomsPage = 'cpoms-page',
-  LeadershipOpportunities = 'leadership-opportunities',
+  LeadershipOpportunities = 'student-leadership',
   Library = 'library',
   Policy = 'policy',
   TheDeltasPage = 'the-deltas-page',
@@ -45,4 +46,5 @@ export enum STRAPI_MODEL {
   AcademicsHighSchool = 'academics-high-school',
   AcademicsCollegeCounseling = 'academics-college-counseling',
   AboutOurTeam = 'about-our-team',
+  Contact = 'contact',
 }

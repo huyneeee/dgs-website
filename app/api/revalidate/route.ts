@@ -30,6 +30,8 @@ function getTagsRevalidate(model: STRAPI_MODEL) {
 
   if (model === STRAPI_MODEL.AboutOurTeam)
     return REVALIDATE_KEYS['about-our-team'];
+
+  if (model === STRAPI_MODEL.Contact) return REVALIDATE_KEYS['contact'];
 }
 
 export async function POST(request: NextRequest) {

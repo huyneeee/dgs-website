@@ -59,7 +59,7 @@ const OurTeam = ({
             ))}
           </div>
 
-          <div className="w-full h-[1px] bg-gray-400 my-6 lg:my-10" />
+          <div className="divide-line" />
 
           {/* seniorLeadershipTeam */}
           {seniorLeadershipTeam && (
@@ -104,7 +104,7 @@ const OurTeam = ({
 
       {page === 'ourTeam' && (
         <>
-          <div className="w-full h-[1px] bg-gray-400 my-6 lg:my-10" />
+          <div className="divide-line" />
 
           {/* highSchool */}
           {!!highSchool.length && (
@@ -126,7 +126,7 @@ const OurTeam = ({
             </>
           )}
 
-          <div className="w-full h-[1px] bg-gray-400 my-6 lg:my-10" />
+          <div className="divide-line" />
 
           {/* highSchool */}
           {!!middleSchool.length && (

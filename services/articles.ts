@@ -1,12 +1,12 @@
 import { REVALIDATE_KEYS } from '@/configs/revalidate-keys';
 import qs from 'qs';
 
-const getArticle = async (locale: string, limit = 3) => {
+const getArticle = async (locale: string, limit = 2, skip = 0) => {
   const query = qs.stringify(
     {
       locale,
       pagination: {
-        start: 0,
+        start: skip,
         limit,
       },
       populate: {

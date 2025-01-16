@@ -33,7 +33,7 @@
       "root": "Student Life",
       "student-well-being": "Student Well-being",
       "cpoms": "CPOMS",
-      "leadership-opportunities": "Leadership Opportunities"
+      "student-leadership": "Student Leadership"
     },
     "careers": {
       "root": "Careers"
@@ -45,7 +45,8 @@
       "policies": "Policies",
       "school-calendar": "School Calendar",
       "handbook": "Handbook",
-      "education-review": "Education Review"
+      "education-review": "Education Review",
+      "contact": "Contact"
     }
   },
   "HomePage": {
@@ -80,7 +81,7 @@
     "title": "Student Life",
     "student-well-being": "Student Well-being",
     "cpoms": "CPOMS",
-    "leadership-opportunities": "Leadership Opportunities"
+    "student-leadership": "Student Leadership"
   },
   "SchoolCalendar": {
     "title": "School Calender"

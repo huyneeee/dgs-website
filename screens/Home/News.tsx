@@ -7,14 +7,12 @@ import NewsItem from '@/screens/News/NewsItem';
 
 export const News = () => {
   const locale = useLocale();
-  const data = use(articleAPI.getArticle(locale));
-
-  console.log('data', data);
+  const data = use(articleAPI.getArticle(locale, 3));
 
   return (
     <section id="news" className="container xl:py-10 py-6">
       <div className="flex items-center justify-between">
-        <h3 className="heading-3">The Latest News & Stories</h3>
+        <h3 className="heading-2">The Latest News & Stories</h3>
         <Link
           href={paths.resources['news-and-events']}
           className="text-jungle text-xs xl:text-sm uppercase hover:underline underline-offset-2"

@@ -8,6 +8,7 @@ type Section = {
   textContent: string;
   media: Media[] | null;
   title?: string;
+  contentOrder?: 'image-text' | 'text-image';
 };
 
 interface Article extends SectionContent {

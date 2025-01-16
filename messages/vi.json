@@ -32,7 +32,7 @@
       "root": "Đời sống học đường",
       "student-well-being": "Sức khỏe của học sinh",
       "cpoms": "CPOMS",
-      "leadership-opportunities": "Cơ hộ phát triển kỹ đạo lãnh đạo"
+      "student-leadership": "Cơ hộ phát triển kỹ đạo lãnh đạo"
     },
     "careers": {
       "root": "Việc làm"
@@ -44,7 +44,8 @@
       "policies": "Chính sách",
       "school-calendar": "Lịch năm học",
       "handbook": "Sổ tay",
-      "education-review": "Tổng quan giáo dục"
+      "education-review": "Tổng quan giáo dục",
+      "contact": "Liên hệ"
     }
   },
   "HomePage": {
@@ -80,7 +81,7 @@
     "root": "Sức khỏe và sự an toàn của học sinh",
     "student-well-being": "Sức khỏe và sự an toàn của học sinh",
     "cpoms": "CPOMS",
-    "leadership-opportunities": "Cơ hội phát triển kỹ năng lãnh đạo"
+    "student-leadership": "Cơ hội phát triển kỹ năng lãnh đạo"
   },
   "SchoolCalendar": {
     "title": "Lịch năm học DGS"

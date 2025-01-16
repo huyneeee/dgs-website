@@ -8,6 +8,8 @@ const TheDeltasPage = () => {
   const locale = useLocale();
   const deltasPageData = use(about.getDeltasPage(locale));
 
+  console.log('deltasPageData', deltasPageData);
+
   return <SectionContent content={deltasPageData.data} />;
 };
 

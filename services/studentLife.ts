@@ -42,7 +42,7 @@ const getLeadershipOpportunity = async (locale: string) => {
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/leadership-opportunity?${getQuery(locale)}`,
     {
       next: {
-        tags: [REVALIDATE_KEYS['leadership-opportunities']],
+        tags: [REVALIDATE_KEYS['student-leadership']],
       },
     },
   );

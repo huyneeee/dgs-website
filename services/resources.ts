@@ -38,7 +38,26 @@ const getLibrary = async (locale: string) => {
   return data as ResponseStrapi<SectionContent>;
 };
 
+const getContact = async (locale: string) => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/contact?${getQuery(locale)}`,
+    {
+      next: {
+        tags: [REVALIDATE_KEYS['contact']],
+      },
+    },
+  );
+
+  if (!res.ok) {
+    throw new Error(`Response status: ${res.status}`);
+  }
+
+  const data = await res.json();
+  return data as ResponseStrapi<SectionContent>;
+};
+
 export const resources = Object.freeze({
   getPolicy,
   getLibrary,
+  getContact,
 });

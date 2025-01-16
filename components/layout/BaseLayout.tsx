@@ -27,8 +27,6 @@ export default async function BaseLayout({ children, locale }: Props) {
   const messages = await getMessages();
   const banners = await bannerAPI.getBanners();
 
-  console.log('banners', banners);
-
   return (
     <html className="h-full scroll-smooth" lang={locale}>
       <body className={cn(franklin.className, 'flex h-full flex-col')}>
