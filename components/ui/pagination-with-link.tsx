@@ -58,11 +58,12 @@ export function PaginationWithLinks({
 
   const buildLink = useCallback(
     (newPage: number) => {
+      const path = pathname.slice(3); // 3 = length /en | /vi
       const key = pageSearchParam || 'page';
-      if (!searchParams) return `${pathname}?${key}=${newPage}`;
+      if (!searchParams) return `${path}?${key}=${newPage}`;
       const newSearchParams = new URLSearchParams(searchParams);
       newSearchParams.set(key, String(newPage));
-      return `${pathname}?${newSearchParams.toString()}`;
+      return `${path}?${newSearchParams.toString()}`;
     },
     [searchParams, pathname],
   );
@@ -146,7 +147,7 @@ export function PaginationWithLinks({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center gap-3 w-full">
+    <div className="flex flex-col md:flex-row items-center gap-3 w-full mt-4">
       {pageSizeSelectOptions && (
         <div className="flex flex-col gap-4 flex-1">
           <SelectRowsPerPage

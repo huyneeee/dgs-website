@@ -13,14 +13,14 @@ const CoreValues = () => {
   return (
     <section id="testimonials" className="container xl:py-10 py-6">
       <div className="grid grid-cols-1 md:grid-cols-2 rounded-lg overflow-hidden">
-        <div className="flex flex-col bg-[url('/icons/corevalue/ngoaikhoa.png')] relative p-4 md:p-8 gap-2">
+        <div className="flex flex-col bg-[url('/icons/corevalue/ngoaikhoa.png')] relative p-4 md:p-8 gap-4">
           <div className="bg-[rgba(0,0,0,0.6)] absolute top-0 bottom-0 left-0 right-0 z-[1]"></div>
 
           <p className="text-[28px] md:text-[40px] text-white font-[700] relative z-10 text-center md:text-left">
             The Delta
           </p>
 
-          <p className="text-[16px] md:text-[24px] font-[500] leading-[1.5] text-white text-center md:text-left relative z-10 w-full md:w-[70%]">
+          <p className="text-[16px] md:text-[24px] font-[500] leading-[1.5] text-white text-center md:text-left relative z-10 w-full md:w-[90%]">
             Graduates are comprehensive individuals who are prepared in
             personality, knowledge, spirit and body for university, work and
             life, capable of adapting and succeeding in any situation.
