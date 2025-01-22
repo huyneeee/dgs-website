@@ -21,7 +21,6 @@ import { ChevronRight, Menu, Search, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import SwitchLanguage from './SwitchLanguage';
 
 const DATA = Object.entries(paths).slice(1); // skip Home
 
@@ -44,36 +43,41 @@ const MenuMobile = () => {
   }, []);
 
   return (
-    <Sheet open={isOpen} modal={false} onOpenChange={(open) => setIsOpen(open)}>
+    <Sheet open={isOpen} modal={false} onOpenChange={open => setIsOpen(open)}>
       <SheetTrigger asChild>
-        <Button variant='ghost' aria-label='Menu' title='Menu' className='xl:hidden flex'>
-          <Menu size={24} />
+        <Button
+          variant="ghost"
+          aria-label="Menu"
+          title="Menu"
+          className="xl:hidden flex"
+        >
+          <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent side='top' className='w-full h-full flex flex-col'>
-        <SheetHeader className='hidden'>
+      <SheetContent side="top" className="w-full h-full flex flex-col">
+        <SheetHeader className="hidden">
           <SheetTitle>Edit profile</SheetTitle>
           <SheetDescription>Make changes to your profile here</SheetDescription>
         </SheetHeader>
-        <div className='flex items-center justify-between'>
+        <div className="flex items-center justify-between">
           <Image
-            src='/images/logos/logo-4.png'
-            alt='logo'
+            src="/images/logos/logo-4.png"
+            alt="logo"
             width={87}
             height={36}
             priority
-            className='w-[87px] h-[36px]'
+            className="w-[101px] h-[42px]"
           />
-          <Button onClick={() => setIsOpen(false)} variant='ghost' size='icon'>
+          <Button onClick={() => setIsOpen(false)} variant="ghost" size="icon">
             <X size={24} />
           </Button>
         </div>
-        <div className='flex w-full max-w-sm items-center space-x-2'>
+        <div className="flex w-full max-w-sm items-center space-x-2">
           <Input
-            type='text'
-            placeholder='Search'
+            type="text"
+            placeholder="Search"
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={e => setInput(e.target.value)}
           />
           <Button
             onClick={() => {
@@ -84,41 +88,41 @@ const MenuMobile = () => {
                 },
               });
             }}
-            type='submit'
-            size='icon'
+            type="submit"
+            size="icon"
           >
             <Search />
           </Button>
         </div>
-        <div className='flex-auto overflow-y-auto'>
+        <div className="flex-auto overflow-y-auto">
           {DATA.map((nav, key) => {
             if (Object.keys(nav[1]).length === 1) {
               return (
                 <Link
                   key={key}
                   href={(nav[1] as any).root}
-                  className='hover:text-jungle hover:font-semibold hover:underline pb-1'
+                  className="hover:text-jungle hover:font-semibold hover:underline pb-1"
                 >
                   {t(`${nav[0]}.root` as any)}
                 </Link>
               );
             }
             return (
-              <Collapsible key={key} className='group/collapsible'>
-                <CollapsibleTrigger className='flex items-center py-3 group-data-[state=open]/collapsible:font-semibold group-data-[state=open]/collapsible:text-jungle'>
+              <Collapsible key={key} className="group/collapsible">
+                <CollapsibleTrigger className="flex items-center py-3 group-data-[state=open]/collapsible:font-semibold group-data-[state=open]/collapsible:text-jungle">
                   {t(`${nav[0]}.root` as any)}
                   <ChevronRight
                     size={16}
-                    className='ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90'
+                    className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90"
                   />
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <div className='flex flex-col gap-2 pl-5'>
+                  <div className="flex flex-col gap-2 pl-5">
                     {Object.entries(nav[1])
                       .slice(1)
                       .map((navChild, keyChild) => (
                         <Link
-                          className='hover:text-jungle hover:font-semibold hover:underline pb-1'
+                          className="hover:text-jungle hover:font-semibold hover:underline pb-1"
                           key={`${key}-${keyChild}`}
                           href={navChild[1]}
                         >
@@ -131,7 +135,6 @@ const MenuMobile = () => {
             );
           })}
         </div>
-        <SwitchLanguage />
       </SheetContent>
     </Sheet>
   );

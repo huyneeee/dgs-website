@@ -1,21 +1,15 @@
-import { paths } from '@/app/router';
-import { Link } from '@/i18n/routing';
-import { TabContent } from '@/screens/About/TabContent';
+import { TabContent } from '@/components/layout/TabContent';
+import { tabs } from '@/configs/tabs';
 import { useTranslations } from 'next-intl';
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 export default function AboutLayout({ children }: PropsWithChildren) {
-  const t = useTranslations('AboutPage');
+  const t = useTranslations();
   return (
-    <main className='bg-[#fafafa] flex flex-col w-full container xl:pb-40 pb-20'>
-      <Link
-        href={paths.about.root}
-        className='heading-2 my-3 lg:my-5 hover:text-jungle'
-      >
-        {t('title')}
-      </Link>
-      <TabContent />
+    <section className="container">
+      <h3 className="heading-2">{t('AboutPage.title')}</h3>
+      <TabContent data={tabs.about!} translationKey="about" />
       {children}
-    </main>
+    </section>
   );
 }

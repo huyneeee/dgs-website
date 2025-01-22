@@ -19,8 +19,8 @@ export default function Error({ error, reset }: Props) {
   return (
     <div>
       {t.rich('description', {
-        p: (chunks) => <p className='mt-4'>{chunks}</p>,
-        retry: (chunks) => <Button onClick={reset}>{chunks}</Button>,
+        p: chunks => <p className="mt-4">{chunks}</p>,
+        retry: chunks => <Button onClick={reset}>{chunks}</Button>,
       })}
     </div>
   );

@@ -10,8 +10,8 @@ export const StudentWellBeing = () => {
   const t = useTranslations();
   return (
     <section
-      id='student-well-being'
-      className='flex items-center flex-col container sm:my-10 my-5 xl:gap-20 gap-10'
+      id="student-well-being"
+      className="flex items-center flex-col container sm:my-10 my-5 gap-10"
     >
       <FadeInBox
         hide={{
@@ -26,42 +26,55 @@ export const StudentWellBeing = () => {
           duration: 0.5,
         }}
       >
-        <div className='flex items-center xl:gap-16 lg:flex-row-reverse flex-col-reverse max-lg:gap-10'>
-          <h3 className='xl:text-4xl sm:text-2xl text-lg italic max-lg:text-center'>
-            {t('HomePage.studentWellBeing-1')}
-          </h3>
-          <Image
-            src='/images/student-well-being/kid-1.jpg'
-            alt='kid-1'
-            width={500}
-            height={350}
-            className='rounded-2xl'
-          />
+        <div className="flex md:flex-row flex-col items-center gap-4 md:gap-10 ">
+          <div className="aspect-[50/35] w-full  relative">
+            <Image
+              src="/images/student-well-being/kid-1.jpg"
+              alt="kid-1"
+              fill
+              className="rounded-2xl"
+            />
+          </div>
+          <div className="flex flex-col gap-6">
+            <h3 className="xl:text-4xl sm:text-2xl text-lg max-lg:text-center">
+              {t('HomePage.studentWellBeing-1')}
+            </h3>
+            <div className="text-center md:text-left">
+              <Button
+                size="lg"
+                className="rounded-lg bg-jungle hover:bg-jungle hover:brightness-90 w-[180px]"
+              >
+                <Link href="/">{t('readMore')}</Link>
+                <MoveRight />
+              </Button>
+            </div>
+          </div>
         </div>
       </FadeInBox>
-      <div className='flex items-center xl:gap-16 w-full h-[300px] xl:h-[500px] relative'>
+
+      {/* <div className="flex items-center xl:gap-16 w-full h-[300px] xl:h-[500px] relative">
         <Image
-          src='/images/student-well-being/kid-2.jpg'
-          alt='kid-2'
-          className='rounded-2xl object-cover brightness-75 blur-[1px]'
+          src="/images/student-well-being/kid-2.jpg"
+          alt="kid-2"
+          className="rounded-2xl object-cover brightness-75 blur-[1px]"
           fill
-          sizes='100vw'
+          sizes="100vw"
         />
-        <div className='absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2'>
-          <FadeInBox className='flex items-center justify-center flex-col sm:gap-10 gap-6'>
-            <h2 className='heading-2 text-background min-w-max'>
+        <div className="absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2">
+          <FadeInBox className="flex items-center justify-center flex-col sm:gap-10 gap-6">
+            <h2 className="heading-2 text-background min-w-max">
               {t('HomePage.studentWellBeing-2')}
             </h2>
             <Button
-              size='lg'
-              className='rounded-lg bg-jungle hover:bg-jungle hover:brightness-90'
+              size="lg"
+              className="rounded-lg bg-jungle hover:bg-jungle hover:brightness-90"
             >
-              <Link href='/'>{t('readMore')}</Link>
+              <Link href="/">{t('readMore')}</Link>
               <MoveRight />
             </Button>
           </FadeInBox>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

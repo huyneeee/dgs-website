@@ -1,1 +1,1 @@
-export {default} from '@/screens/NotFoundPage';
+export { default } from '@/screens/NotFoundPage';

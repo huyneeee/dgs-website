@@ -15,10 +15,15 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com'
-      }
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'http',
+        hostname: '**',
+      },
     ],
   },
+  output: 'standalone',
 };
 
 export default withNextIntl(nextConfig);

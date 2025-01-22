@@ -1,1 +1,13 @@
-export { default } from '@/screens/About/TheDeltas/TheDeltasPage';
+import { generateMetadataFromData } from '@/lib/generateMetaDataFromData';
+import { about } from '@/services/about';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const data = await about.getDeltasPage(params.locale);
+  return generateMetadataFromData(data.data.seo);
+}
+
+export { default } from '@/screens/About/TheDeltasPage';

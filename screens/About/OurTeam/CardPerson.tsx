@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn, getImageLink } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
@@ -19,7 +19,7 @@ export const CardPerson = ({
   name,
   position,
   className,
-  onClick
+  onClick,
 }: PropsCardPerson) => {
   return (
     <div
@@ -27,31 +27,31 @@ export const CardPerson = ({
       className={cn(
         'flex flex-col group cursor-pointer',
         type === 'circle' && 'justify-center items-center',
-        className
+        className,
       )}
     >
       <div
         className={cn(
-          'relative w-full h-[300px]',
+          'relative w-full aspect-square',
           type === 'circle' && 'aspect-square',
-          size === 'sm' && 'h-24 w-24'
+          size === 'sm' && 'h-24 w-24',
         )}
       >
         <Image
-          src={avatarUrl}
-          alt='avatar'
+          priority
+          src={getImageLink(avatarUrl)}
+          alt="avatar"
           fill
-          sizes='33%vw'
           className={cn(
-            'object-cover rounded-3xl group-hover:brightness-50',
-            type === 'circle' && 'rounded-full'
+            'object-cover rounded-xl group-hover:brightness-50',
+            type === 'circle' && 'rounded-full',
           )}
         />
       </div>
-      <h5 className='text-base text-gray-900 mt-3 sm:mt-6 font-bold group-hover:text-jungle min-w-max'>
+      <h5 className="mt-3 sm:mt-6 font-[600] text-jungle min-w-max text-[22px]">
         {name}
       </h5>
-      <p className='muted min-w-max'>{position}</p>
+      <p className="text-[18px] mt-2">{position}</p>
     </div>
   );
 };

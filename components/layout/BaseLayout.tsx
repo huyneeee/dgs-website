@@ -1,17 +1,19 @@
 import Navigation from '@/components/layout/Navigation';
-import Searching from '@/screens/Searching';
+import Searching from '@/screens/Searching/Searching';
 import { cn } from '@/lib/utils';
 import { LazyMotion, domAnimation } from 'motion/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Libre_Franklin } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { ReactNode } from 'react';
 import { Footer } from './Footer';
+import DialogBanner from './DialogBanner';
+import { bannerAPI } from '@/services/banners';
 
-const franklin = Libre_Franklin({
+const franklin = Montserrat({
   subsets: ['latin', 'vietnamese'],
   display: 'swap',
-  variable: '--font-libre-franklin',
+  variable: '--font-montserrat',
 });
 
 type Props = {
@@ -23,16 +25,20 @@ export default async function BaseLayout({ children, locale }: Props) {
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+  const banners = await bannerAPI.getBanners();
 
   return (
-    <html className='h-full scroll-smooth' lang={locale}>
+    <html className="h-full scroll-smooth" lang={locale}>
       <body className={cn(franklin.className, 'flex h-full flex-col')}>
         <NextIntlClientProvider messages={messages}>
           <LazyMotion features={domAnimation}>
-            <Navigation type='normal' />
-            {children}
+            <Navigation type="normal" />
+            <main className="bg-[#fafafa] flex flex-col w-full pb-10">
+              {children}
+            </main>
             <Searching />
             <Footer />
+            <DialogBanner banners={banners.data} />
           </LazyMotion>
         </NextIntlClientProvider>
       </body>
