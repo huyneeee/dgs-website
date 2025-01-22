@@ -122,6 +122,7 @@ const MenuMobile = () => {
                       .slice(1)
                       .map((navChild, keyChild) => (
                         <Link
+                          onClick={() => setIsOpen(false)}
                           className="hover:text-jungle hover:font-semibold hover:underline pb-1"
                           key={`${key}-${keyChild}`}
                           href={navChild[1]}
