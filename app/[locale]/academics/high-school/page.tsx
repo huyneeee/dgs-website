@@ -4,9 +4,10 @@ import { academicsAPI } from '@/services/academics';
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const data = await academicsAPI.getHighSchoolPage(params.locale);
+  const locale = (await params).locale;
+  const data = await academicsAPI.getHighSchoolPage(locale);
   return generateMetadataFromData(data.data.seo);
 }
 

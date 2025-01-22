@@ -4,9 +4,10 @@ import { resources } from '@/services/resources';
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const data = await resources.getPolicy(params.locale);
+  const locale = (await params).locale;
+  const data = await resources.getPolicy(locale);
   return generateMetadataFromData(data.data.seo);
 }
 

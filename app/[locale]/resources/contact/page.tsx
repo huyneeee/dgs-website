@@ -4,9 +4,10 @@ import { resources } from '@/services/resources';
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const data = await resources.getContact(params.locale);
+  const locale = (await params).locale;
+  const data = await resources.getContact(locale);
   return generateMetadataFromData(data.data.seo);
 }
 

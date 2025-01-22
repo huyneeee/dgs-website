@@ -4,9 +4,10 @@ import { coCurruculars } from '@/services/coCurriculars';
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const data = await coCurruculars.getActivitiesPage(params.locale);
+  const locale = (await params).locale;
+  const data = await coCurruculars.getActivitiesPage(locale);
   return generateMetadataFromData(data.data.seo);
 }
 export { default } from '@/screens/CoCurriculars/ClubAndActivities';

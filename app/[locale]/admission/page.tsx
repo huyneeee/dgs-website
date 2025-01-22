@@ -4,9 +4,10 @@ import { admission } from '@/services/admission';
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const data = await admission.getAdmission(params.locale);
+  const locale = (await params).locale;
+  const data = await admission.getAdmission(locale);
   return generateMetadataFromData(data.data.seo);
 }
 

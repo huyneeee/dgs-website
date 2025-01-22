@@ -4,9 +4,10 @@ import { studentLife } from '@/services/studentLife';
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const data = await studentLife.getLeadershipOpportunity(params.locale);
+  const locale = (await params).locale;
+  const data = await studentLife.getLeadershipOpportunity(locale);
   return generateMetadataFromData(data.data.seo);
 }
 
