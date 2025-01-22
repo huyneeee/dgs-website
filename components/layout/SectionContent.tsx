@@ -22,17 +22,18 @@ const SectionContent = ({ content }: { content: SectionContent }) => {
           {content.sections.map((section, index) => {
             return (
               <FadeInBox
-              // hide={{
-              //   y: 0,
-              //   x: '100%',
-              // }}
-              // show={{
-              //   y: 0,
-              //   x: 0,
-              // }}
-              // transitions={{
-              //   duration: 0.5,
-              // }}
+                key={index}
+                // hide={{
+                //   y: 0,
+                //   x: '100%',
+                // }}
+                // show={{
+                //   y: 0,
+                //   x: 0,
+                // }}
+                // transitions={{
+                //   duration: 0.5,
+                // }}
               >
                 <div
                   key={index}

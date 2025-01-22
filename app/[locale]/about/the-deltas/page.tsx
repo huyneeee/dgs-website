@@ -4,9 +4,10 @@ import { about } from '@/services/about';
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const data = await about.getDeltasPage(params.locale);
+  const locale = (await params).locale;
+  const data = await about.getDeltasPage(locale);
   return generateMetadataFromData(data.data.seo);
 }
 

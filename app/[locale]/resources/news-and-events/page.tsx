@@ -1,10 +1,10 @@
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const title =
-    params.locale === 'en' ? 'News and Events' : 'Tin tức và sự kiện';
+  const locale = (await params).locale;
+  const title = locale === 'en' ? 'News and Events' : 'Tin tức và sự kiện';
   return {
     title: `${title} | Delta Global School`,
   };

@@ -4,9 +4,10 @@ import { coCurruculars } from '@/services/coCurriculars';
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const data = await coCurruculars.getAdvisoryPage(params.locale);
+  const locale = (await params).locale;
+  const data = await coCurruculars.getAdvisoryPage(locale);
   return generateMetadataFromData(data.data.seo);
 }
 
