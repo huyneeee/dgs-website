@@ -26,7 +26,7 @@ WORKDIR /app
 ENV NEXT_SHARP_PATH=/app/node_modules/sharp
 
 COPY --from=BUILD /app/public ./public
-COPY --from=BUILD /app/next.config.mjs ./
+COPY --from=BUILD /app/next.config.ts ./
 
 # Set mode "standalone" in file "next.config.js"
 COPY --from=BUILD /app/.next/standalone ./
